@@ -1,0 +1,49 @@
+---
+layout: post
+status: publish
+published: true
+title: bMotion 0.0.5
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 78
+wordpress_url: http://jamesoff.net/site/2003/01/12/bmotion-005/
+date: '2003-01-12 23:25:28 -0500'
+date_gmt: '2003-01-12 22:25:28 -0500'
+categories:
+- Coding
+tags: []
+comments: []
+---
+<p>bMotion 0.0.5 is out!<br &#47;><br />
+<br &#47;><br />
+<a href="http:&#47;&#47;bmotion.sourceforge.net">See here :)<&#47;a><br &#47;><br />
+<br &#47;><br />
+* optimised events.tcl a bit to be more efficient<br &#47;><br />
+* switched the way bMotion represents its version to make it more consistent for<br &#47;><br />
+  proper releases etc<br &#47;><br />
+* adjusted the light plugin<br &#47;><br />
+* moved question handler to plugin<br &#47;><br />
+* moved pinches to a plugin<br &#47;><br />
+* moved asl trigger to a plugin<br &#47;><br />
+* tidied up code a bit<br &#47;><br />
+- no longer tracking chanmood, because it was rubbish<br &#47;><br />
+* smileys now handled by a plugin (new regexps included)<br &#47;><br />
+* New routine to clean []s in nicks, should be more reliable<br &#47;><br />
++ Clean nicks for all entry points, not just event_main<br &#47;><br />
+* bMotion won't greet someone if nothing else has been said since it greeted <br &#47;><br />
+  last<br &#47;><br />
++ bMotion looks for modules&#47;settings_<botnet -nick>.tcl too (and loads it after<br &#47;><br />
+  settings.tcl). You can use this to prevent overwriting your bot's settings<br &#47;><br />
+  when installing a new version of the code, and also to run more than one<br &#47;><br />
+  bot off the same installation of bMotion.<br &#47;><br />
+  For this to work, you MUST define the botnet-nick setting in your eggdrop's<br &#47;><br />
+  config file. Remember that it will be case sensitive, so if I have my botnet<br &#47;><br />
+  nick set to "NoTopic" the file has to be settings_NoTopic.tcl<br &#47;><br />
++ same as above for abstracts.tcl (if you want to augment an existing one,<br &#47;><br />
+  use lappend not set (man lappend for more info)  <&#47;botnet></p>

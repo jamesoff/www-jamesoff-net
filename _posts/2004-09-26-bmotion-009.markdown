@@ -1,0 +1,24 @@
+---
+layout: post
+status: publish
+published: true
+title: bMotion 0.0.9
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 172
+wordpress_url: http://jamesoff.net/site/2004/09/26/bmotion-009/
+date: '2004-09-26 00:51:23 -0400'
+date_gmt: '2004-09-25 23:51:23 -0400'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>bMotion 0.0.9 is out finally! It's been over a year since the last release, blimey.</p>
+<p><a href="http:&#47;&#47;www.bmotion.net&#47;download">Download it here<&#47;a> or <a href="http:&#47;&#47;www.bmotion.net&#47;wiki&#47;index.php&#47;What's Probably New">see what's new<&#47;a>.</p>

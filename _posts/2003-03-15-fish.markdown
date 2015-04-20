@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Fish!
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 96
+wordpress_url: http://jamesoff.net/site/2003/03/15/fish/
+date: '2003-03-15 18:08:38 -0500'
+date_gmt: '2003-03-15 17:08:38 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>I have <a href="http:&#47;&#47;www.jamesoff.net&#47;go&#47;38" target="_blank">six Zebra Danios<&#47;a>! :D</p>

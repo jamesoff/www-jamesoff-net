@@ -1,0 +1,25 @@
+---
+layout: post
+status: publish
+published: true
+title: Kitsune? :o
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 87
+wordpress_url: http://jamesoff.net/site/2003/02/06/kitsune-o/
+date: '2003-02-06 18:20:00 -0500'
+date_gmt: '2003-02-06 17:20:00 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>o_O<br &#47;><br />
+<br &#47;></p>
+<p><img SRC="http:&#47;&#47;www.datazap.net&#47;free&#47;masenko&#47;quiz&#47;lovehina&#47;lovehina_kitsune.gif" BORDER=0 WIDTH=300 HEIGHT=211 ALT="Which Love Hina Girl Are You?"><br &#47;>Well-endowed both in mind and in body, you don't hesitate to use both to your advantage! Your confidence and sense of humour make you a pleasure to be around. You're crafty, clever and cute - a formula that would bring any man to his knees! But while your wit and charisma are definite assets, others may not be able to keep up with your resourceful intelligence. Take care not to overwhelm people with your treasures.<br &#47;><a HREF="http:&#47;&#47;powersugoi.net&#47;quiz&#47;lovehina.html" TARGET="_top">Which Love Hina Girl Are You?<&#47;a><&#47;p></p>

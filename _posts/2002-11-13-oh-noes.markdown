@@ -1,0 +1,29 @@
+---
+layout: post
+status: publish
+published: true
+title: OH NOES
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 59
+wordpress_url: http://jamesoff.net/site/2002/11/13/oh-noes/
+date: '2002-11-13 09:33:39 -0500'
+date_gmt: '2002-11-13 08:33:39 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>ASVE ME FORM BENIG HAKCED!!!!!11<br &#47;><br />
+<br &#47;><br />
+<img src="http:&#47;&#47;www.grooblehonk.co.uk&#47;blog_images&#47;hack.gif" border="0" alt="Help" &#47;><br &#47;><br />
+<br &#47;><br />
+ehehehe:<br &#47;><br />
+<code>0933.03 [ Scorponok] Security Alert! Your Computer May Be Sending Messages In All Title Case! [OK]<br &#47;><br />
+<&#47;code><br &#47;></p>

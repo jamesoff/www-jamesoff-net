@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: webcast
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 53
+wordpress_url: http://jamesoff.net/site/2002/11/09/webcast/
+date: '2002-11-09 20:52:14 -0500'
+date_gmt: '2002-11-09 19:52:14 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>Dudley is webcasting from my house tonight from 9-11 GMT on <a href="http:&#47;&#47;www.radio-freedom.co.uk">Radio Freedom<&#47;a> :)</p>

@@ -1,0 +1,34 @@
+---
+layout: post
+status: publish
+published: true
+title: Tired
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 63
+wordpress_url: http://jamesoff.net/site/2002/11/14/tired/
+date: '2002-11-14 20:50:19 -0500'
+date_gmt: '2002-11-14 19:50:19 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>hehe, so far <a href="http:&#47;&#47;www.jamesoff.net&#47;index2.php">145 people<&#47;a> have been told to <a href="http:&#47;&#47;www.jamesoff.net&#47;f.php">get it in gear<&#47;a> today :)<br &#47;><br />
+<br &#47;><br />
+Damo finally came through and got the audio-out cable for toastlord to us, so we can do TV Out properly. However, PowerDVD refuses to play with TV Out enabled which is strange because using the same OS and card it worked in Monks Road, so I can only assume the drivers are at fault; indeed the only advice I've been able to find on the web has been <i>"get new drivers"<&#47;i>. I used the generic nvidia drivers for it; perhaps I need some other driver -- but I don't know how that'll work with things like UT2003, blah.<br &#47;><br />
+<br &#47;><br />
+Still no sign of the agents doing anything about the mould, I shall go talk to them properly on Saturday.<br &#47;><br />
+<br &#47;><br />
+<img src="http:&#47;&#47;www.grooblehonk.co.uk&#47;blog_images&#47;weblog-20021114.jpg" border="0" alt="IRC photo" align="right" &#47;><br &#47;><br />
+I might be buying a Psion 5mx off a <a href="http:&#47;&#47;www.darkrock.co.uk">friend<&#47;a> (having sold my old 5 to <a href="http:&#47;&#47;www.dam0.com">Damo<&#47;a> in the final year at uni when I bought my Visor (I got narked off with Psion's lack of support for syncing with Outlook). I'm buying it because I sort of miss the Psion (it was a VERY nice machine to use), plus Chris is supplying a 256Mb card for it, and going to set up Linux (mmm <a href="http:&#47;&#47;www.debian.org">Debian<&#47;a>).<br &#47;><br />
+<br &#47;><br />
+I thought I'd stick a random cool photo on this post, isn't that nice. It's a picture I took when JF bought the ITS digicam home and I was trying out the macro mode :) I quite like it, may try something similar when I redesign jamesoff.net (soon).<br &#47;><br />
+<br &#47;><br />
+Jon and Robin seem to be addicted to Zim, and also stoned. Good work :P</p>

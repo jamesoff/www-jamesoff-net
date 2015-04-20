@@ -1,0 +1,42 @@
+---
+layout: post
+status: publish
+published: true
+title: Distant
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 121
+wordpress_url: http://jamesoff.net/site/2003/07/19/distant/
+date: '2003-07-19 22:52:03 -0400'
+date_gmt: '2003-07-19 21:52:03 -0400'
+categories:
+- General
+tags: []
+comments:
+- id: 273
+  author: Sarah
+  author_email: sarah@girlonfire.co.uk
+  author_url: http://www.girlonfire.co.uk
+  date: '2003-07-20 22:02:22 -0400'
+  date_gmt: '2003-07-20 21:02:22 -0400'
+  content: Awwww, that is SO lovely. What prompted you to write that? I will have
+    to prod Dan til he writes nice things about me on his website.
+- id: 274
+  author: Duds
+  author_email: dudley@enterspace.org
+  author_url: http://url
+  date: '2003-07-29 21:57:09 -0400'
+  date_gmt: '2003-07-29 20:57:09 -0400'
+  content: "* sound of something go straight over my head"
+---
+<p>Have you ever held someone so close, yet so far away?<br />
+Have you wanted to help someone, only to be helpless?<br />
+Have you tried to guide someone, but discovered yourself to be lost?<br />
+Have you needed to talk to someone, but had nothing to say?</p>
+<p>I love you Roz</p>

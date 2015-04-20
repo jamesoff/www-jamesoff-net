@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Title
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 66
+wordpress_url: http://jamesoff.net/site/2002/11/17/title/
+date: '2002-11-17 23:02:08 -0500'
+date_gmt: '2002-11-17 22:02:08 -0500'
+categories:
+- Coding
+tags: []
+comments: []
+---
+<p>Interesting to note what happens when you point two ALICE bots <a href="http:&#47;&#47;www.nik.com.au&#47;alice&#47;">at each other<&#47;a>... bMotion doesn't really do converstations as such, but it'd be fun to put something like this together once it evolves a bit :)</p>

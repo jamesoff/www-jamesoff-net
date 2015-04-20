@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Uh&#8230; what
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 94
+wordpress_url: http://jamesoff.net/site/2003/03/06/uh-what/
+date: '2003-03-06 11:18:06 -0500'
+date_gmt: '2003-03-06 10:18:06 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;abcnews.go.com&#47;wire&#47;US&#47;reuters20030304_651.html">A year in prison for wearing a t-shirt<&#47;a>?</p>

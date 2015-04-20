@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Galaxy
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 284
+wordpress_url: http://jamesoff.net/site/2007/04/07/galaxy/
+date: '2007-04-07 23:51:22 -0400'
+date_gmt: '2007-04-07 22:51:22 -0400'
+categories:
+- General
+tags: []
+comments:
+- id: 1966
+  author: Dudley
+  author_email: dudley@enterspace.org
+  author_url: http://retrofusiononline.com
+  date: '2007-04-08 13:52:21 -0400'
+  date_gmt: '2007-04-08 12:52:21 -0400'
+  content: And give us S4C damnit!
+---
+<p>Dammit why isn't Galaxy available on DAB in the South West but it is in other areas? Shouldn't all digital stations be available everywhere? :(</p>

@@ -1,0 +1,38 @@
+---
+layout: post
+status: publish
+published: true
+title: Spam!
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 69
+wordpress_url: http://jamesoff.net/site/2002/12/07/spam/
+date: '2002-12-07 11:52:10 -0500'
+date_gmt: '2002-12-07 10:52:10 -0500'
+categories:
+- General
+tags: []
+comments:
+- id: 229
+  author: Chris
+  author_email: chris@darkrock.co.uk
+  author_url: http://www.darkrock.co.uk
+  date: '2002-12-17 12:04:33 -0500'
+  date_gmt: '2002-12-17 11:04:33 -0500'
+  content: Uhm. Try spam-assassin it rocks :-)
+---
+<p>I couldn't help but laugh at this article on Ars: <a href="http:&#47;&#47;arstechnica.com&#47;archive&#47;news&#47;1039226445.html" title="Spammer's house is &#47;.'d">Spammer's house is &#47;.'d<&#47;a>. <br &#47;><br />
+<br &#47;><br />
+Recently (as some of you may have noticed) I've been blocking a lot of email with something called <a href="http:&#47;&#47;smarden.org&#47;qconfirm&#47;" title="qconfirm">qconfirm<&#47;a>. This is one of those things that links into your mail server (in this case, qmail) and when someone emails you, it defers their mail temporarily and mails them back. When they reply to THAT mail, their original email is delivered, and their address is added to an "ok" list so they don't have to confirm again.<br &#47;><br />
+<br &#47;><br />
+The upshot of this is that if someone spams me, it never arrives, because they usually fake the return address and so don't get the confirmation mail (not that they'd reply to it anyway, I'm sure). If an email is confirmed in a week, it's bounced (perhaps the bounce will help get me removed from the list of "active" addresses, who knows).<br &#47;><br />
+<br &#47;><br />
+I'm very pleased with the way it's working so far; noone's complained about it, and if I know someone's going to email me I can manually add their address in advance. The only bit of spam I've got is one that's being sent to a public mailing list (which I shall probably unsubscribe from anyway).<br &#47;><br />
+<br &#47;><br />
+In other news, bMotion is now listed on <a href="http:&#47;&#47;www.sf.net&#47;projects&#47;bmotion">sourceforge<&#47;a> and <a href="http:&#47;&#47;freshmeat.net&#47;projects&#47;bmotion&#47;?topic_id=24">freshmeat<&#47;a>, so if you're interested feel free to check it out. It's nice now having many people helping me find bugs, and more than one person to try to fix them :)</p>

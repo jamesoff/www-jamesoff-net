@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: HAY GUYS
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 90
+wordpress_url: http://jamesoff.net/site/2003/02/27/hay-guys/
+date: '2003-02-27 10:15:19 -0500'
+date_gmt: '2003-02-27 09:15:19 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p><img src="http:&#47;&#47;www.grooblehonk.co.uk&#47;blog_images&#47;c2.jpg" border="0" alt="hey guys what's going on in this cookie" &#47;><br &#47;><br />
+mmm, <a href="http:&#47;&#47;www.somethingawful.com">Something Awful<&#47;a> forums :)<br &#47;><br />
+<br &#47;><br />
+Edit: I just posted this... my first ever photoshop post on there! Wheee<br &#47;><br />
+<img src="http:&#47;&#47;www.grooblehonk.co.uk&#47;blog_images&#47;cookie.gif" border="0" alt="im in ur cookie im killin ur d00dz" &#47;></p>

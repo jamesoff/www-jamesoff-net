@@ -1,0 +1,28 @@
+---
+layout: post
+status: publish
+published: true
+title: boooom!
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 222
+wordpress_url: http://jamesoff.net/site/2006/02/24/boooom/
+date: '2006-02-24 11:18:42 -0500'
+date_gmt: '2006-02-24 10:18:42 -0500'
+categories:
+- Sites
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;b.oooom.net">http:&#47;&#47;b.oooom.net<&#47;a> is now live! This is the rewrite and proper deployment of my old quickjump thing I had on jamesoff.net.</p>
+<p>Yes, it's just another URL shortener :P</p>
+<p>b.oooom.net supports redirect pausing, where you can see the URL you're about to be sent to before you actually go there. You trigger it by adding &#47;pause to the end of the URL (e.g. http:&#47;&#47;b.oooom.net&#47;70&#47;pause). You can save your pause setting in a cookie (I promise it's not evil) so that all URLs are paused automatically - good for work!</p>
+<p>URLs can also be marked <abbr title="Not work safe">NWS<&#47;abbr> by the person adding them (and only them) which will pause on redirect every time with a warning that it's dodgy material (also good for work). Of course, you can set a cookie to skip the NWS warning at home.</p>
+<p>You can shrink URLs by putting them into the form on the website or by hitting http:&#47;&#47;b.oooom.net&#47;shrink&#47;<your url>.</p>
+<p>I shall shortly create eggdrop and irssi scripts to make it easier to do URL shortening by IRC.</p>

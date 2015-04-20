@@ -1,0 +1,24 @@
+---
+layout: post
+status: publish
+published: true
+title: Upgraded!
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 187
+wordpress_url: http://jamesoff.net/site/2005/02/22/upgraded/
+date: '2005-02-22 00:14:10 -0500'
+date_gmt: '2005-02-21 23:14:10 -0500'
+categories:
+- General
+- Sites
+tags: []
+comments: []
+---
+<p>Hooray, upgraded to WordPress 1.5. While my theme seems to sort of work with the new version, something isn't quite right so I've stuck with the default theme for now until I can take another look at it. I've upgraded SpamKarma too so let's see how this goes (especially when combined with my <a href="http:&#47;&#47;trap.blbl.org">spamtrap blog<&#47;a> for the RBL).</p>

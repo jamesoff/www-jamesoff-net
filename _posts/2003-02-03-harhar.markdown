@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: harhar
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 85
+wordpress_url: http://jamesoff.net/site/2003/02/03/harhar/
+date: '2003-02-03 21:32:09 -0500'
+date_gmt: '2003-02-03 20:32:09 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>JamesOff is [james@oper.efnet.demon.co.uk]<br &#47;><br />
+<br &#47;><br />
+harhar win<br &#47;><br />
+<br &#47;><br />
+Also, I hate trains</p>

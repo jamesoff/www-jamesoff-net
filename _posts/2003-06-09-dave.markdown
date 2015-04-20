@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: Dave
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 112
+wordpress_url: http://jamesoff.net/site/2003/06/09/dave/
+date: '2003-06-09 10:48:53 -0400'
+date_gmt: '2003-06-09 09:48:53 -0400'
+categories:
+- General
+tags: []
+comments: []
+---
+<p>It seems Dave has just won at Australia:<br &#47;><br &#47;></p>
+<blockquote><p>"hey bro, assume youre in bed but just to let you know that your crazy little brother<br />
+                     just jumped off a 50 metre high tower in the middle of the rainforest with an overated rubber<br />
+                     band tied to his ankles, and it was the dogs bollocks"<br />
+<&#47;blockquote></p>

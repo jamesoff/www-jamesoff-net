@@ -1,0 +1,44 @@
+---
+layout: post
+status: publish
+published: true
+title: VMware
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 158
+wordpress_url: http://jamesoff.net/site/2004/07/28/vmware/
+date: '2004-07-28 08:32:22 -0400'
+date_gmt: '2004-07-28 07:32:22 -0400'
+categories:
+- General
+tags: []
+comments:
+- id: 315
+  author: Alvin Chan
+  author_email: cctimeslipcc@yahoo.com
+  author_url: ''
+  date: '2005-07-29 03:16:30 -0400'
+  date_gmt: '2005-07-29 02:16:30 -0400'
+  content: I am about to take my VCP test tomorrow.  Any pointers you can give me?
+- id: 316
+  author: Roger
+  author_email: roger@jumpitsolutions.co.uk
+  author_url: ''
+  date: '2005-08-30 14:23:36 -0400'
+  date_gmt: '2005-08-30 13:23:36 -0400'
+  content: |-
+    We are currently recruiting for VMWare Certified professionals.
+
+    If you are looking for work, please call Roger at Jump on
+
+    0044 1892 616 888
+---
+<p><img align="right" src="http:&#47;&#47;www.vmware.com&#47;services&#47;img&#47;vcp_logo.gif" alt="VMware Certified Professional" title="VCP logo" &#47;><br />
+Hooray, I'm a  VMware Certified Professional! My test score was 89%, which apparently puts me in about the top 3% of people who've done it... and there's only 23 of us in Europe.</p>
+<p>Now all I need is some serious hardware at home to run ESX Server on...</p>

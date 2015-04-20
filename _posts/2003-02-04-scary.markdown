@@ -1,0 +1,25 @@
+---
+layout: post
+status: publish
+published: true
+title: Scary
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 86
+wordpress_url: http://jamesoff.net/site/2003/02/04/scary/
+date: '2003-02-04 22:37:45 -0500'
+date_gmt: '2003-02-04 21:37:45 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;www.jamesoff.net&#47;go&#47;17">hehehe<&#47;a><br &#47;><br />
+<br &#47;><br />
+I've made it so that people can add their own quickjump links on jamesoff.net easily with one URL. Instructions are on <a href="http:&#47;&#47;www.jamesoff.net&#47;quick">www.jamesoff.net&#47;quick<&#47;a>.</p>

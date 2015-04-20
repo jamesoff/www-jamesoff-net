@@ -1,0 +1,35 @@
+---
+layout: post
+status: publish
+published: true
+title: A new IE?
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 164
+wordpress_url: http://jamesoff.net/site/2004/08/09/a-new-ie/
+date: '2004-08-09 09:37:21 -0400'
+date_gmt: '2004-08-09 08:37:21 -0400'
+categories:
+- General
+tags: []
+comments:
+- id: 370
+  author: Duds
+  author_email: ''
+  author_url: ''
+  date: '2004-08-19 17:01:59 -0400'
+  date_gmt: '2004-08-19 16:01:59 -0400'
+  content: Whereas from my perspective the only reason I use Firefox is tabs.  A decent
+    native implementation for IE and I'm straight back.  Firefoxs inability to even
+    start on the right monitor is exceptionally irritating.
+---
+<p><a href="http:&#47;&#47;slashdot.org&#47;articles&#47;04&#47;08&#47;08&#47;2357243.shtml?tid=113&tid=154&tid=1">Slashdot<&#47;a> is linking to a story about MSIE possibly being due an overhaul to a new major version.</p>
+<blockquote><p>...improvements could possibly include support for tabbed browsing, better security, more PNG and CSS compliance, and RSS integration....<&#47;blockquote><br />
+Apparently this is an attempt to claw back the small portion of market share they've misplaced in the Mozilla (and other browsers) camp(s). As one of the users who has moved from IE from Firefox, I can safely say the addition of these features to IE wouldn't really make me move back. IE has a proven track record of being insecure and slow, and the last thing web designers need is <strong>another<&#47;strong> flavour of <a href="http:&#47;&#47;www.quirksmode.org">IE rendering bizarreness<&#47;a> to deal with. I think a lot of people using Firefox now will agree with me that even if the security problems are fixed, tabbed browsing is added and the rendering engine is improved that Firefox still has a lot more going for it.</p>
+<p>The only reason I keep IE installed is for sites that require it for certain javascript quirks or similar, and I look forward to when I can properly remove it from my system.</p>

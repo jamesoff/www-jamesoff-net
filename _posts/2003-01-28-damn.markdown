@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Damn.
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 84
+wordpress_url: http://jamesoff.net/site/2003/01/28/damn/
+date: '2003-01-28 16:50:29 -0500'
+date_gmt: '2003-01-28 15:50:29 -0500'
+categories:
+- General
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;bbspot.com&#47;News&#47;2003&#47;01&#47;os_quiz.php"><img src="http:&#47;&#47;www.bbspot.com&#47;Images&#47;News_Features&#47;2003&#47;01&#47;os_quiz&#47;windows_98.jpg" width="300" height="90" border="0" alt="Which OS are You?"><br &#47;>Which OS are You?<&#47;a><br &#47;></p>

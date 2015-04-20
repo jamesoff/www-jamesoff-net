@@ -1,0 +1,174 @@
+---
+layout: post
+status: publish
+published: true
+title: NNFMP?
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 138
+wordpress_url: http://jamesoff.net/site/2003/11/17/nnfmp/
+date: '2003-11-17 00:23:22 -0500'
+date_gmt: '2003-11-16 23:23:22 -0500'
+categories:
+- General
+tags: []
+comments:
+- id: 3109
+  author: btallman
+  author_email: btallman85@yahoo.com
+  author_url: http://yahoo.com
+  date: '2008-01-26 15:45:47 -0500'
+  date_gmt: '2008-01-26 15:45:47 -0500'
+  content: |
+    <p>I am looking for the same information.  can anyone help?<&#47;p>
+- id: 16939
+  author: ALOKRAJ
+  author_email: alokraj_adca@yahoo.com
+  author_url: http://www.4ppl.com/alokraj_adca
+  date: '2008-11-26 07:40:39 -0500'
+  date_gmt: '2008-11-26 07:40:39 -0500'
+  content: "<p>I have two emails that I need confermation on. They are from the same
+    person. I want to make sure that I am coming\nup with the correct result. Here
+    are the full headers of both. When you trace an email and get the numbers on the
+    end of the email like dram_heart777@75.110.246.14. YOu take this number and run
+    it and it tell you where it was sent rom correct. This is the computer it was
+    sent from? The two emails I have inclosed are diffrent fom the number in the email
+    above. The emails are originating from diffrent places in North America, they
+    are to be coming from Russia??? \nI know this is little more tech. than some of
+    the rest but I know someone out there can help. Is there a way to retreave a computer
+    that is using a dynamic IP??? Can we do this to computers in Russia as far as
+    finding scammers?? Thanks for the help and explination.<&#47;p>\n\n<p>ACTUALLY,
+    WHEN YOU CONFIGURE YOUR OUT LOOK EXPRESS THEN YOUR ALL SENT E-MAIL HAVE TO RE-DIRECTED
+    IN NORMAL WAY BUT IN SOME CASES YAHOO USE SPECIAL PROTOCOL NAMED \"NNFMP\" TO
+    DENOTE SENDER MAY BE IN SCAMMER LIST OR USING ANY SPECIAL SOFTWARE TO HIDE THEIR
+    OWN IP ADDRESS AND DETAILS. IN THIS WAY, YOU GOT LAST LINE AT E-MAIL HEADER LIKE---<&#47;p>\n\n<p>Received:
+    from unknown (HELO COMP-1) (dram_heart777@72.36.194.10 with plain)\n HERE IP ADDRESS
+    SHOULD BE 72.36.194.10 BUT THIS IS NOT A RIGHT IP ADDRESS. IT IS A DYNAMIC AND
+    CAN BE CHANGED.HERE COMPUTER TERMINAL CANN'T BE CHANGED, COM-1 OR 192.168.0.41
+    ETC DENOTE THIS E-MAIL SENT FROM A OFFICE NETWORK. PLAIN TYPE E-MAIL IS PROVIDED
+    BY OUTLOOK AT TIME OF SENDING E-MAIL. FOR MORE YOU MAY JOIN MY MCA COMMUNITY AT
+    WWW.ORKUT.COM  , MY ORKUT ID IS alokrajmca  , I AM FROM INDIA AND I ALWAYS RECEIVE
+    MANY SCAMMER E-MAILS WITH NNFMP PROTOCOLS. IN SOME CASES SENDER [UNKNOWN]. AT
+    SUBJECT LINE.<&#47;p>\n"
+- id: 50628
+  author: D. Stussy
+  author_email: spam@spam.org
+  author_url: ''
+  date: '2009-12-19 00:10:40 -0500'
+  date_gmt: '2009-12-19 00:10:40 -0500'
+  content: "<p>According to the Yahoo postmaster, any message containing a \"with
+    NNFMP\" clause is a FORGED message:<&#47;p>\n\n<p>'It appears that the sender
+    of this message forged the header information\nto give the impression that it
+    came from your email address. The sender \nseems to have used your email address
+    in the \"reply-to\" and&#47;or the \n\"from\" field of the message sent out and,
+    as a result, misdirected email\nis being returned to you.'<&#47;p>\n\n<p>I received
+    the same response when I told them that I noticed the clause on mail I actually
+    did send (to myself at another site) via webmail:<&#47;p>\n\n<p>'WRONG.  This
+    is a rejection of a message I actually sent.  Yahoo is inserting invalid header
+    data into its \"Received:\" headers.  NNFMP is not a valid protocol for use with
+    \"WITH\" per the IANA.'<&#47;p>\n\n<p>Yahoo's response indicating that it was
+    still a forged message tells me that they do not know what they're doing.  Their
+    servers DID generate such headers, yet they won't recognize such.<&#47;p>\n\n<p>My
+    answer came from:<&#47;p>\n\n<p>Austine\nYahoo! Customer Care\n66929704<&#47;p>\n\n<p>Re:
+    Fw: failure notice (KMM101597777V72148L0KM)<&#47;p>\n\n<p>The message to myself
+    contained this:\nReceived: from [76.13.13.26] by n4.bullet.mail.ac4.yahoo.com
+    with NNFMP; 16 Dec 2009 20:59:45 -0000\nReceived: from [68.142.237.87] by t3.bullet.mail.ac4.yahoo.com
+    with NNFMP; 16 Dec 2009 20:59:45 -0000\nReceived: from [216.252.111.169] by t3.bullet.re3.yahoo.com
+    with NNFMP; 16 Dec 2009 20:59:45 -0000\nReceived: from [127.0.0.1] by omp104.mail.re3.yahoo.com
+    with NNFMP; 16 Dec 2009 20:59:45 -0000\nX-Yahoo-Newman-Property: ymail-3\nX-Yahoo-Newman-Id:
+    693458.67241.bm@omp104.mail.re3.yahoo.com<&#47;p>\n\nReceived: (qmail 64166 invoked
+    by uid 60001); 16 Dec 2009 20:59:45 -0000\n\n<p>Since it appears to be Yahoo's
+    official position that \"with NNFMP\" is forged, I suggest that everyone BLOCK
+    every message that contains such.  Eventually, Yahoo's mail users (myself included)
+    won't be able to send mail to anyone, and Yahoo will finally figure out that what
+    they have done is non-standard and fix their broken mail service.<&#47;p>\n"
+- id: 81485
+  author: maria p. mccahill
+  author_email: mariapmac1@yahoo.com
+  author_url: ''
+  date: '2011-09-26 07:09:37 -0400'
+  date_gmt: '2011-09-26 07:09:37 -0400'
+  content: |
+    <p>Hi,my question is how can i find out who has accessed my contacts from my yahoo account.Someone has sent messages to all and i have asked for help from yahoo,no response at all! Also how could someone without password get in? thank-you for any help,maria<&#47;p>
+- id: 82970
+  author: Rob Szivek
+  author_email: robtalon@yahoo.com
+  author_url: ''
+  date: '2011-11-02 00:26:23 -0400'
+  date_gmt: '2011-11-02 00:26:23 -0400'
+  content: |
+    <p>PNNFMP is an internal protocol not recognised by IANA or the RFC's. Yahoo uses this protocol to internally route e-mail traffic across their network. The acronym stands for "Newman No-Frills Mail Protocol". It's a simple, high-performance protocol comparable to QMTP.<&#47;p>
+- id: 83009
+  author: jamesoff
+  author_email: james@jamesoff.net
+  author_url: http://jamesoff.net
+  date: '2011-11-02 19:37:24 -0400'
+  date_gmt: '2011-11-02 19:37:24 -0400'
+  content: |
+    <p>Thanks for the info, Rob :)<&#47;p>
+- id: 178579
+  author: Val
+  author_email: softer74@gmail.com
+  author_url: ''
+  date: '2015-01-15 15:48:02 -0500'
+  date_gmt: '2015-01-15 15:48:02 -0500'
+  content: |
+    <p>Hi,<&#47;p>
+
+    <p>I'm not really sure to understand well how NNFMP works and what action to take to prevent from new spams.<&#47;p>
+
+    <p>I understand anyway, spammers are using it to route their email through real yahoo servers using real yahoo accounts.<&#47;p>
+
+    <p>Actualy, I received a spam from someone I know from the family, that was writing using his usual Yahoo account, trying to ask some money because he was on trouble faking he was really the sender !<&#47;p>
+
+    <p>Also, I would say I'm not the only one who received in the family the same email.<&#47;p>
+
+    <p>So, some recommandations if I understood well is for the sender to change password, saying anyway, that, as for SMTP protocol authentification has not been verified, then it is not sure that the sender account has been compromised.<&#47;p>
+
+    <p>Also, maybe only a list of yahoo accounts has been "stolen" from the real sender (the spammer here), not meaning then that this specific account has been hacked finding the password.<&#47;p>
+
+    <p>But, as it appears that this email has been sent to all the contacts of the sender, what should I think then ?<&#47;p>
+
+    <p>I'm not pretenting finding a solution here, but I think more about a local virus on the pc sender, infected through his email software running on his computer.<&#47;p>
+
+    <p>So, what should I tell the sender that has been "hacked" to do here ?<&#47;p>
+
+    <p>Another point is interesting.<&#47;p>
+
+    <p>The email was written in a perfect english (whereas the spammer asked for money saying he was in Ukraine) and the last public known ip adress in the email header (the first ip sender) belongs to yahoo servers in California (the victim of the spammer is american here), and the adress that sent to yahoo server (the first one) is a local loop adress 127.0.0.1.<&#47;p>
+
+    <p>Does it mean then that someone has sent locally the email from yahoo server in California, or it has nothing to do with it ?<&#47;p>
+
+    <p>Thank you very much for your answers that could be useful to so many of us.<&#47;p>
+- id: 178582
+  author: Val
+  author_email: softer74@gmail.com
+  author_url: ''
+  date: '2015-01-15 15:55:01 -0500'
+  date_gmt: '2015-01-15 15:55:01 -0500'
+  content: |
+    <p>I paste here the details I'm talking about (the two first IP adresses):<&#47;p>
+
+    <p>Received: from [98.137.12.206] by tm16.bullet.mail.gq1.yahoo.com with NNFMP; 14 Jan 2015 19:17:14 -0000
+    Received: from [127.0.0.1] by omp1014.mail.gq1.yahoo.com with NNFMP; 14 Jan 2015 19:17:14 -0000
+    X-Yahoo-Newman-Property: ymail-4
+    X-Yahoo-Newman-Id: 766322.93602.bm@omp1014.mail.gq1.yahoo.com<&#47;p>
+- id: 178585
+  author: Val
+  author_email: softer74@gmail.com
+  author_url: ''
+  date: '2015-01-15 16:11:34 -0500'
+  date_gmt: '2015-01-15 16:11:34 -0500'
+  content: |
+    <p>Ok, thinking about it, it may be someone who has created a Yahoo account in US (from anywhere in the world) processed by the californian server, maybe where the spammed account resides, so that it explains the local loop...in fact someone had to force the use of the real sender address using a specific software locally...or am I wrong here ?<&#47;p>
+---
+<p>Does anyone know what the hell NNFMP is?</p>
+<p>I recently had some spam that included the header line:</p>
+<blockquote><p>Received:  from [66.218.67.176] by n36.grp.scd.yahoo.com with NNFMP; 16 Nov 2003 20:11:57 -0000<&#47;blockquote><br />
+but I can't work out what NNFMP is. Google searches seem to show it's only Yahoo that use it, but there's no RFC for it... so what is it?</p>

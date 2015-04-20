@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: Spam Karma 2
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 198
+wordpress_url: http://jamesoff.net/site/2005/05/24/spam-karma-2/
+date: '2005-05-24 10:51:32 -0400'
+date_gmt: '2005-05-24 09:51:32 -0400'
+categories:
+- Coding
+- Spam
+- RBL
+tags: []
+comments: []
+---
+<p>Wow, SK2 rocks.</p>
+<p>Dr Dave has invited me to write the auto RBL-submission code for it which I shall hopefully be doing this week sometime. I just looked at the todo list for 2.0 and spotted that auto-submission is one of the few outstanding items left, so I need to get my skates on :)</p>
+<p>It also seems MediaWikis (like bmotion.net's) are targets for spammers too. A quick bit of investigating this morning shows that MediaWiki actually sets a <em>rel<&#47;em> on external links to stop search engines following them off the wiki so spamming is useless in that sense. It just clogs up the blog and can generate clickthoughs by users. There is some anti-spam stuff available and I shall look at adding RBL support to it too.</p>

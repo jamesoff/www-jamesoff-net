@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: pube tube?
+author:
+  display_name: jamesoff
+  login: jamesoff
+  email: james@jamesoff.net
+  url: http://jamesoff.net
+author_login: jamesoff
+author_email: james@jamesoff.net
+author_url: http://jamesoff.net
+wordpress_id: 156
+wordpress_url: http://jamesoff.net/site/2004/05/26/pube-tube/
+date: '2004-05-26 12:29:30 -0400'
+date_gmt: '2004-05-26 11:29:30 -0400'
+categories:
+- General
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;www.urbandictionary.com&#47;define.php?term=pube+tube&defid=685278">As defined by Roger and myself when we were in Edinburgh<&#47;a></p>
