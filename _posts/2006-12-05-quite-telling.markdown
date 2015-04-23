@@ -42,7 +42,10 @@ comments:
   date_gmt: '2006-12-19 12:26:54 -0500'
   content: a brown snake, possibly a trouser snake?
 ---
-<p>In the kitchen at work, a box has appeared with a riddle on it, inviting people to submit their answers for a prize draw.</p>
-<p>> What is brown, has a head and a tail but no legs?</p>
-<p>The girls agree it's a one or two pence coin.</p>
-<p>The consensus among the boys seems to be that it's a turd.</p>
+In the kitchen at work, a box has appeared with a riddle on it, inviting people to submit their answers for a prize draw.
+
+	What is brown, has a head and a tail but no legs?
+
+The girls agree it's a one or two pence coin.
+
+The consensus among the boys seems to be that it's a turd.
