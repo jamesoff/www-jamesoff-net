@@ -63,11 +63,18 @@ comments:
     <p>Thanks in any case,
     Manu<&#47;p>
 ---
-<p>This is a workflow which lets you look up how much you have left in a You Need a Budget (http:&#47;&#47;www.youneedabudget.com) category for the current month.</p>
-<p>It looks for your budget file in ~&#47;Dropbox&#47;YNAB and ~&#47;Documents&#47;YNAB. If you have a single budget in one of those folders, it will use that and needs no configuration. If you have multiple budgets, or a budget somewhere else, you can use a File Action on it to select it as the budget to use.</p>
-<p>Fuzzy&#47;substring matching, tries to use the currency symbol&#47;format based on the budget's configuration.</p>
-<p>Hacked up the code to parse the YNAB data myself, so please make sure that it's reporting accurately for you :)</p>
-<p><img src="http:&#47;&#47;sakaki.jamesoff.net&#47;~james&#47;Screen Shot 2013-07-19 at 23.23.02.png" alt="" &#47;></p>
-<p><img src="http:&#47;&#47;sakaki.jamesoff.net&#47;~james&#47;Screen Shot 2013-07-19 at 23.21.37.png" alt="" &#47;></p>
-<p>Download here: <a href="http:&#47;&#47;cloud.jamesoff.net&#47;2C04451d3R3Q">http:&#47;&#47;cloud.jamesoff.net&#47;2C04451d3R3Q<&#47;a></p>
-<p>(Updated 2014-08-27 to fix 0.00 values being shown as "overspent", and to add caching to speed up results.)</p>
+This is a workflow which lets you look up how much you have left in a [You Need a Budget](http://www.youneedabudget.com) category for the current month.
+
+It looks for your budget file in `~/Dropbox/YNAB` and `~/Documents/YNAB`. If you have a single budget in one of those folders, it will use that and needs no configuration. If you have multiple budgets, or a budget somewhere else, you can use a File Action on it to select it as the budget to use.
+
+Fuzzy/substring matching, tries to use the currency symbol/format based on the budget's configuration.
+
+Hacked up the code to parse the YNAB data myself, so please make sure that it's reporting accurately for you :)
+
+![screenshot](http://sakaki.jamesoff.net/~james/Screen Shot 2013-07-19 at 23.23.02.png)
+
+![screenshot](http://sakaki.jamesoff.net/~james/Screen Shot 2013-07-19 at 23.21.37.png)
+
+Download here: <http://cloud.jamesoff.net/2C04451d3R3Q>
+
+(Updated 2014-08-27 to fix 0.00 values being shown as "overspent", and to add caching to speed up results.)

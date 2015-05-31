@@ -1,4 +1,5 @@
 ---
+type: page
 layout: page
 status: publish
 published: true

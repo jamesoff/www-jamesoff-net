@@ -20,3 +20,4 @@ timezone: Europe/London
 markdown: kramdown
 permalink: pretty
 paginate: 5
+comments: false

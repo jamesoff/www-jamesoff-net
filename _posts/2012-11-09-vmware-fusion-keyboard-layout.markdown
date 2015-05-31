@@ -18,7 +18,8 @@ date_gmt: '2012-11-09 15:36:32 -0500'
 categories:
 - Uncategorized
 tags: []
-comments: []
+comments: false
 ---
-<p>If you're using VMware Fusion and can't get the keyboard layout right in your VM (especially if you can't get backslash to show up), try my <a href="http:&#47;&#47;jamesoff.net&#47;site&#47;code&#47;windows&#47;happy-hacking-uk-layout&#47;" title="Happy Hacking UK layout">Happy Hacking UK layout<&#47;a>. This gives me the correct layout on my MBP at least :)</p>
-<p>My MBP has the <code>\<&#47;code> key (<code>shift-\<&#47;code> is <code>|<&#47;code>) above the return key and to the right of the <code>]<&#47;code> key. Note that because this is the UK layout, it makes <code>shift-2<&#47;code> generate double-quote <code>"<&#47;code>, and shift-single-quote generate <code>@<&#47;code>. For personal reasons, <code>shift-3<&#47;code> generates hash <code>#<&#47;code>. To obtain the GBP Sterling currency symbol <code>&Acirc;&pound;<&#47;code>, use <code>right alt-3<&#47;code>.</p>
+If you're using VMware Fusion and can't get the keyboard layout right in your VM (especially if you can't get backslash to show up), try my [Happy Hacking UK layout](http://jamesoff.net/site/code/windows/happy-hacking-uk-layout). This gives me the correct layout on my MBP at least :)
+
+My MBP has the `\` key (`shift-\` is `|`) above the return key and to the right of the `]` key. Note that because this is the UK layout, it makes `shift-2` generate double-quote `"`, and shift-single-quote generate `@`. For personal reasons, `shift-3` generates hash `#`. To obtain the GBP Sterling currency symbol `£`, use `right alt-3`.

@@ -1,0 +1,203 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>tarsnap under cygwin &#8211; jamesoff.net</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta name="keywords" content="cygwin, compile, tarsnap, windows, backup">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="tarsnap under cygwin">
+<meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta name="twitter:creator" content="@jamesoff">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tarsnap under cygwin">
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta property="og:url" content="/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/">
+<meta property="og:site_name" content="jamesoff.net">
+
+
+
+
+
+<link rel="canonical" href="/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="jamesoff.net Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="James Seward photo" class="author-photo">
+					<h4>James Seward</h4>
+					<p>A generally awesome guy</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:james@jamesoff.net"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/jamesoff"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/jms.off"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>
+				
+				
+				<li>
+					<a href="http://github.com/jamesoff"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/" rel="bookmark" title="tarsnap under cygwin">tarsnap under cygwin</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2009-09-10T15:36:31+01:00">September 10, 2009</time></span></h2>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>To get <a href="http:&#47;&#47;beta.tarsnap.com">tarsnap &lt;&#47;a&gt;working under cygwin, here's what you need to do:
+<ol>
+<li>Install the following packages using the cygwin setup tool:
+<ul>
+<li>gcc4&lt;&#47;li&gt;
+<li>make&lt;&#47;li&gt;
+<li>openssl (needed for runtime, not for building)&lt;&#47;li&gt;
+<li>openssl-devel&lt;&#47;li&gt;
+<li>zlib-devel&lt;&#47;li&gt;<br />
+&lt;&#47;ul&gt;&lt;&#47;li&gt;
+<li>Download and extract the <a href="https:&#47;&#47;beta.tarsnap.com&#47;download.html">tarsnap code&lt;&#47;a&gt;.&lt;&#47;li&gt;
+<li>Run <code>.&#47;configure&lt;&#47;code&gt; (this seems to be much slower on cygwin than on other more UNIXy platforms)&lt;&#47;li&gt;
+<li>Run <code>make all install clean&lt;&#47;code&gt;&lt;&#47;li&gt;<br />
+&lt;&#47;ol&gt;
+<p>Tarsnap should now be installed and you can use it in the normal fashion - create a host key with <code>tarsnap-keygen&lt;&#47;code&gt; and then get backing up!
+<p>Edit 2009-12-16: checkers from #tarsnap on EFnet has written a post with scripts for Linux and Cygwin tarsnapping at <a href="http:&#47;&#47;www.bluebottle.net.au&#47;blog&#47;2009&#47;tarsnap-backups-on-windows-and-linux">http:&#47;&#47;www.bluebottle.net.au&#47;blog&#47;2009&#47;tarsnap-backups-on-windows-and-linux&lt;&#47;a&gt;
+<p>You may also wish at add `--prefix=&#47;` to the `configure` command line, as `&#47;usr&#47;local` isn't in the default path.</p>
+</a></p></code></p></code></li></code></li></a></li></li></li></li></li></li></ul></li></ol></a></p>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/#cygwin" title="Pages tagged cygwin" class="tag"><span class="term">cygwin</span></a><a href="/tags/#compile" title="Pages tagged compile" class="tag"><span class="term">compile</span></a><a href="/tags/#tarsnap" title="Pages tagged tarsnap" class="tag"><span class="term">tarsnap</span></a><a href="/tags/#windows" title="Pages tagged windows" class="tag"><span class="term">windows</span></a><a href="/tags/#backup" title="Pages tagged backup" class="tag"><span class="term">backup</span></a></span>
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/sysadmin/microsoft/2009/09/10/tarsnap-under-cygwin/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/coding/my%20stuff/2008/04/10/irssi-typing-speed-script/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/coding/mac%20os%20x/alfred/2013/07/20/ynab-category-check-workflow-for-alfred-2/" title="YNAB category check workflow for Alfred 2">YNAB category check workflow for Alfred 2</a></h3>
+      <p>This is a workflow which lets you look up how much you have left in a [You Need a Budget](http://www.youneedabudget.com) category for the...&hellip; <a href="/coding/mac%20os%20x/alfred/2013/07/20/ynab-category-check-workflow-for-alfred-2/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/uncategorized/2012/11/09/vmware-fusion-keyboard-layout/" title="VMware Fusion keyboard layout">VMware Fusion keyboard layout</a></h4>
+        <span>Published on November 09, 2012</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/mac%20os%20x/2011/07/13/alfred-script-to-toggle-airport/" title="Alfred script to toggle AirPort">Alfred script to toggle AirPort</a></h4>
+        <span>Published on July 13, 2011</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2015 James Seward. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+	        
+
+</body>
+</html>

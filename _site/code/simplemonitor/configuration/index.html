@@ -1,0 +1,255 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Configuration &#8211; jamesoff.net</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Configuration">
+<meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta name="twitter:creator" content="@jamesoff">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuration">
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta property="og:url" content="/code/simplemonitor/configuration/">
+<meta property="og:site_name" content="jamesoff.net">
+
+
+
+
+
+<link rel="canonical" href="/code/simplemonitor/configuration/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="jamesoff.net Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="James Seward photo" class="author-photo">
+					<h4>James Seward</h4>
+					<p>A generally awesome guy</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:james@jamesoff.net"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/jamesoff"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/jms.off"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>
+				
+				
+				<li>
+					<a href="http://github.com/jamesoff"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Configuration</h1>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>The main configuration lives in `monitor.ini` in the same directory as the code.</p>
+<p>Section names are lowercase in square brackets. Settings are defined as `key=value`. Lines can be commented with `#`.</p>
+<p>Monitor section<br />
+---</p>
+<p> * **interval** defines how many seconds to wait between running all the monitors. Note that the time taken to run the monitors is not subtracted from the interval, so the next iteration will run at `interval + time_to_run_monitors` seconds. Required; no default.</p>
+<p> * **monitors** defines the filename to load the monitors themselves from. Not required; default is `monitors.ini`.</p>
+<p> * **pidfile** gives a path to write a pidfile in. Not required; default is none.</p>
+<p> * **remote** enables the listener for receiving data from remote instances. Set to 1 to enable. Not required; default is 0 (disabled).</p>
+<p> * **remote_port** gives the port to listen on for data. Required if **remote** is enabled, otherwise ignored. No default.</p>
+<p>Reporting section<br />
+---</p>
+<p> * **loggers** lists (comma-separated, no spaces) the names of the loggers you have defined. (You can define loggers and not add them to this settings.) Not required; no default.</p>
+<p> * **alerters** lists the names of the alerters you have defined. Not required; no default.</p>
+<p>If you do not define any loggers or alerters, then the only way to monitor the status of your network will be to watch the window the script is running in!</p>
+<p> * <a href="defining-loggers&#47;">Defining loggers&lt;&#47;a&gt;<br />
+ * <a href="defining-alerters&#47;">Defining alerters&lt;&#47;a&gt;
+<p>Monitors<br />
+---</p>
+<p>Monitors go in `monitors.ini` (or another file, if you changed the **monitors** setting above).</p>
+<p> * <a href="defining-monitors&#47;">Defining monitors&lt;&#47;a&gt;
+<p>Example configuration<br />
+--</p>
+<p>Let's have a look at an example configuration.</p>
+<p>Here's `monitor.ini`:</p>
+<pre lang="ini">
+[monitor]<br />
+interval=60
+<p>[reporting]<br />
+loggers=logfile<br />
+alerters=email,email_escalate,sms</p>
+<p>[logfile]<br />
+type=logfile<br />
+filename=monitor.log<br />
+only_failures=1</p>
+<p>[email]<br />
+type=email<br />
+host=mailserver.domain.local<br />
+from=monitor@domain.local<br />
+to=administrator@domain.local</p>
+<p>[email_escalate]<br />
+type=email<br />
+host=mailserver.domain.local<br />
+from=monitor@domain.local<br />
+to=boss@domain.local<br />
+limit=5</p>
+<p>[sms]<br />
+type=bulksms<br />
+username=some_username<br />
+password=some_password<br />
+target=some_mobile_number<br />
+limit=10<br />
+&lt;&#47;pre&gt;</p>
+<p>What does this configuration do? Firstly, it only polls every minute. It has one logger, writing a logfile, and three alerters - two emails and one SMS.</p>
+<p>The logfile is written to `monitor.log` and only contains failures.</p>
+<p>An email is sent to administrator@domain.local when a monitor fails. After a monitor has failed another four times, an email is sent to my boss. After it's failed another five times (for a total of ten), I get an SMS.</p>
+<p>Now we need to write our `monitors.ini`:</p>
+<pre lang="ini">
+[london-ping]<br />
+type=host<br />
+host=london-vpn-endpoint.domain.local<br />
+tolerance=2
+<p>[london-server]<br />
+type=host<br />
+host=london-server.domain.local<br />
+tolerance=2<br />
+depend=london-ping</p>
+<p>[website-http]<br />
+type=http<br />
+url=http:&#47;&#47;www.domain.local<br />
+urgent=0<br />
+gap=300</p>
+<p>[webmail-http]<br />
+type=http<br />
+url=http:&#47;&#47;webmail.domain.local<br />
+allowed_codes=401</p>
+<p>[local-diskspace]<br />
+type=diskspace<br />
+partition=&#47;spool<br />
+limit=500M</p>
+<p>[local-exim]<br />
+type=rc<br />
+runon=mailserver.domain.local<br />
+service=exim</p>
+<p>[local-smtp]<br />
+type=service<br />
+runon=exchange.domain.local<br />
+service=smtpsvc<br />
+&lt;&#47;pre&gt;</p>
+<p>This is what it all means:</p>
+<p> * A monitor called `london-ping` pings the endpoint of our VPN to the London office. This sometimes gets lost in transit even if the link is up, so the tolerance for this monitor is 2.<br />
+ * We also ping `london-server`. As it's the other end of the VPN, we also give it a tolerance of 2. We declare that it depends on `london-ping`, so if the VPN is down we don't get additional alerts for `london-server`.<br />
+ * Next we use an HTTP monitor to check our website is working. I don't need to be SMSed if it breaks, so we set it as not urgent. Also, we'll only check it every 5 minutes (300 seconds).<br />
+ * We want to check our webmail interface is responding, but it needs authentication. We'll allow the HTTP error `401 Authentication Required` to count as success.<br />
+ * We need to make sure the `&#47;spool` partition on this server always has at least 500MB of free space.<br />
+ * We also want to make sure that exim is running on our FreeBSD server `mailserver.domain.local`. This monitor won't try to run anywhere else.<br />
+ * Finally, we want to check the SMTP service is running on our Exchange server.</p>
+<p>This example configuration contains several combinations of monitors you probably won't use on the same server - particularly a diskspace check for a mounted partition (not a drive letter) and a Windows service monitor. I just put them all together here as an example :)</p>
+</pre></pre></a></p></a></a></p>
+
+      <footer class="entry-meta">
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/code/simplemonitor/configuration/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/code/simplemonitor/configuration/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/code/simplemonitor/configuration/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2015 James Seward. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+          
+
+</body>
+</html>
