@@ -20,10 +20,10 @@ categories:
 - my stuff
 tags:
 - irc
-- scripts
+- code
 - irssi
-- perl
-comments: []
+comments: false
 ---
-<p>I have written an irssi script which measures how fast you type on IRC and reports both words per minute and characters per minute.</p>
-<p>More details and download: <a href="&#47;site&#47;irssi-scripts&#47;wpm&#47;">WPM script<&#47;a>.</p>
+I have written an irssi script which measures how fast you type on IRC and reports both words per minute and characters per minute.
+
+More details and download: [WPM script](/site/irssi-scripts/wpm).

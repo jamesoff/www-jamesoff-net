@@ -15,21 +15,8 @@ wordpress_id: 143
 wordpress_url: http://jamesoff.net/site/2003/12/30/open-proxy-checking-for-irc/
 date: '2003-12-30 20:22:13 -0500'
 date_gmt: '2003-12-30 19:22:13 -0500'
-categories:
-- Coding
-tags: []
-comments:
-- id: 307
-  author: Dimitris Ntelakis
-  author_email: dntel@edu.uoc.gr
-  author_url: http://www.pcinfo.gr
-  date: '2006-12-08 15:46:20 -0500'
-  date_gmt: '2006-12-08 14:46:20 -0500'
-  content: |-
-    Fine work dude  ..  very nice script ..  keep the good work..
-
-
-    Greeding from Greece
+tags: ['code', 'irc']
+comments: false
 ---
 Quite a large number of IRC servers run [Open Proxy Monitors](http://www.blitzed.org/bopm/) which either look up connecting hosts in RBLs, or actively scan them to check for open proxies allowing anonymous IRC connections, or both. However, not all servers have them (for various reasons, including legal ones). Not all servers check a wide range of blacklists either.
 
