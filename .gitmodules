@@ -1,0 +1,3 @@
+[submodule "themes/harmony"]
+	path = themes/harmony
+	url = https://github.com/gayanvirajith/harmony.git
