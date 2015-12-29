@@ -9,6 +9,10 @@
   font-weight: 300;
 }
 
+.site-header small a {
+	font-size: inherit;
+}
+
 .site-header .site-title {
   font-size: $h2;
 }

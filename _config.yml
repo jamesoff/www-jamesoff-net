@@ -4,7 +4,8 @@ email:       james@jamesoff.net
 author:      James Seward
 description: "you heard"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://jamesoff.net"
+strapline:   a random code generator
 
 # Google analytics
 google_analytics:

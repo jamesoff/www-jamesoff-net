@@ -1,11 +1,12 @@
 <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
-      <a href="{{ site.url }}" class="site-title">{{ site.title }}</a>
+		<img src="/i/jms.png" width="50" height="50" alt="jms" class="site-title" style="padding-right: 10px;" /> <a href="{{ site.url }}" class="site-title">{{ site.title }}</a>
       <nav class="site-nav">
         {% include navigation.html %}
       </nav>
       <div class="clearfix"></div>
+	  <small>{{ site.strapline }} | &raquo; <a href="https://github.com/jamesoff">github</a></small> 
       {% if site.show_social_icons %}
         {% include social_links.html %}
       {% endif %}
