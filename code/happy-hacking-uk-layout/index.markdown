@@ -1,3 +1,7 @@
+---
+layout: page
+title: Happy Hacking UK Layout
+---
 This is a Windows UK keyboard layout for a [Happy Hacking](http://www.pfusystems.com/embedded-keyboard/hhkb/index.html) keyboard.
 
 * Shift-3 gives # (because that's where I'm used to having it now)
