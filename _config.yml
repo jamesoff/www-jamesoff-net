@@ -57,3 +57,8 @@ sass:
   compressed: true
 gems:
   - jekyll-sitemap
+exclude:
+    - vendor
+    - script
+    - Gemfile
+    - Gemfile.lock
