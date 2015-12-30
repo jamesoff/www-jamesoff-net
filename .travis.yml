@@ -23,3 +23,5 @@ deploy:
   acl: private
   on:
     repo: jamesoff/www-jamesoff-net
+  skip_cleanup: true
+  region: eu-west-1
