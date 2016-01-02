@@ -3,23 +3,7 @@ layout: post
 status: publish
 published: true
 title: Old phones
-author:
-  display_name: jamesoff
-  login: jamesoff
-  email: james@jamesoff.net
-  url: http://jamesoff.net
-author_login: jamesoff
-author_email: james@jamesoff.net
-author_url: http://jamesoff.net
-wordpress_id: 321
-wordpress_url: http://jamesoff.net/site/2008/02/03/old-phones/
-date: '2008-02-03 16:15:24 -0500'
-date_gmt: '2008-02-03 16:15:24 -0500'
-categories:
-- Fun
-tags:
-- history
-- mobile phone
+original: /site/2008/02/03/old-phones/
 comments: false
 ---
 While sorting out boxes of stuff hidden away in a cupboard (so I'd have less pointless stuff to carry around when we move house), I came across some of my old mobile phones.

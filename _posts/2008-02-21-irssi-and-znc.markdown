@@ -3,23 +3,7 @@ layout: post
 status: publish
 published: true
 title: irssi and ZNC
-author:
-  display_name: jamesoff
-  login: jamesoff
-  email: james@jamesoff.net
-  url: http://jamesoff.net
-author_login: jamesoff
-author_email: james@jamesoff.net
-author_url: http://jamesoff.net
-wordpress_id: 337
-wordpress_url: http://jamesoff.net/site/2008/02/21/irssi-and-znc/
-date: '2008-02-21 22:38:24 -0500'
-date_gmt: '2008-02-21 22:38:24 -0500'
-categories: []
-tags:
-- irc
-- irssi
-- znc
+original: /site/2008/02/21/irssi-and-znc/
 comments: false
 ---
 [ZNC](http://en.znc.in) is an IRC bouncer with some pretty nice features. For a number of reasons I wanted to move my ircing from home to a shell, so I decided to give ZNC a try. ZNC isn't in ports, but compiles fine using `gmake`.

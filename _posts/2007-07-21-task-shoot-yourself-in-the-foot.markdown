@@ -3,21 +3,7 @@ layout: post
 status: publish
 published: true
 title: 'TASK: Shoot yourself in the foot'
-author:
-  display_name: jamesoff
-  login: jamesoff
-  email: james@jamesoff.net
-  url: http://jamesoff.net
-author_login: jamesoff
-author_email: james@jamesoff.net
-author_url: http://jamesoff.net
-wordpress_id: 295
-wordpress_url: http://jamesoff.net/site/2007/07/21/task-shoot-yourself-in-the-foot/
-date: '2007-07-21 19:57:15 -0400'
-date_gmt: '2007-07-21 18:57:15 -0400'
-categories:
-- Coding
-- Fun
+original: /site/2007/07/21/task-shoot-yourself-in-the-foot/
 tags: []
 comments: false
 ---
