@@ -19,6 +19,7 @@ deploy:
   acl: private
   on:
     repo: jamesoff/www-jamesoff-net
+    branch: master
   skip_cleanup: true
   region: eu-west-1
 notifications:
