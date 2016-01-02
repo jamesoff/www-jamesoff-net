@@ -19,6 +19,7 @@ categories:
 - Uncategorized
 tags: []
 comments: false
+original: /site/fun/random-recipe-generator
 ---
 Below is a randomly-generated recipe!
 
