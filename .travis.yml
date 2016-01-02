@@ -1,18 +1,14 @@
 language: ruby
 rvm:
 - 2.1
-
 script: ./script/cibuild
-
 branches:
   only:
   - master
   - /feature-(.*)/
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
 deploy:
   provider: s3
   access_key_id: AKIAJLRSYSS26S7OJIJA
@@ -25,3 +21,6 @@ deploy:
     repo: jamesoff/www-jamesoff-net
   skip_cleanup: true
   region: eu-west-1
+notifications:
+  slack:
+    secure: MpqAVbPi8K0o09NFgUPLS3ZiF33Ilzn8lz095MZbsD5W8pAWTVb+xOlBEpSmDuNeqdIg63gN2jKSBPFwoR9YMOiNeuzozFOz5YYlzZn+wZsSDAs+a8b9FrV6LzEbCJSkGnMWUHpTobC7q4sD4RIS++RdyDm/imjO/rbe5oROipS3vW0OzuA/oALL6ScKRSEWeaqKyX6DafSAmlypoqC/5RSXErmIPeD/igKtoRukSokBfVtzsoFdq226vpQ2xTh75qQ1Ogi8aJsHadAwZ1KgIEGShzdktJdB7l5mo+VHlOhzH7bxv6BJvUjrFSR5lVmg8wSjC4sV9XrHswXtDPJ4ylaLNGYdpmGJxrmE84kupAEyvnt6fhlhD6XjMTsNBvoDY2l1GJyqJLRRZVRj3fkFr5sVWzJhtisOx/wbOI+U9TN7JgAMBEaGJp83BpmI8OfY6T7PWEr53mG7Boh25Qca7Xz5Csz0+VpMQv6jfGdmx4F8zKSNI6mjY2CX/CHS6uMEMXXyzqKtUCY8MKOwqysBw6D4W3tnTtCJyiPoTSahisA0Cu49fx0R3VfpyPLfg3uw9KUjXQQmt45Lz+NhWfKNe61JH3ktMwIVkvP3zAa45tT3CFfr1TDpc4TUAzFJM9eLLm09fK1/5qjJ7h+G7BQWWGEMSykvAcyDa3TMImIJxQY=
