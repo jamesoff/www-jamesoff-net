@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+  <TITLE>
+    People in Black
+  </TITLE>
+  <LINK REL=STYLESHEET HREF="styles.css" TYPE="text/css">
+<META NAME="author" content="James Seward">
+<META name="generator" content="NoteTab 4.0">
+<META name="keywords" content="People Black Scary Coat">
+<META name="description" content="Scary Sad. Black. Coaty. You can't believe we did it.">
+<link rel=stylesheet href="styles.css" type="text/css">
+<LINK REV="made" HREF="mailto:pib@planitia.net">
+</HEAD>
+<BODY>
+<IMG SRC="img/menuAbout.gif" BORDER=0 ALT="Menu [Home]" USEMAP=#mainmap><BR><HR>
+<DIV ALIGN=CENTER><IMG SRC="img/people.gif" BORDER=0 ALT="People Menu" USEMAP="#peoplemap"><BR>Click on the name a PiB above to learn more than you wanted to know about them</DIV>
+<!--#include virtual="footer.shtml"-->
+</BODY>
+
+</HTML>

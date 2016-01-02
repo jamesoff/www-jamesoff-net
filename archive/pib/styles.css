@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background-color: black;
+  font-family: Arial;
+}
+
+h1 {
+  color: white;
+}
+
+small {
+  font-size: 8pt;
+}
+
+a {
+  color: white !important;
+}

@@ -1,0 +1,18 @@
+<HR>
+<DIV ALIGN=RIGHT><SMALL>&copy; <A HREF="mailto:james@planitia.net">James Seward</A> 1998 | Hosted by <A HREF="http://www.planitia.net">PlanitiaNet</A><BR>
+
+</BODY>
+
+<MAP NAME="mainmap">
+  <AREA SHAPE=TECT COORDS="97,15,189,55" HREF="index.shtml" TITLE="PiB Home">
+  <AREA SHAPE=RECT COORDS="224,14,370,58" HREF="about.shtml" TITLE="About the PiB">
+	<AREA SHAPE=RECT COORDS="404,15,495,53" HREF="email.shtml" TITLE="Send email">
+</MAP>
+
+<MAP NAME="peoplemap">
+  <AREA SHAPE=RECT COORDS="18,3,92,45" HREF="andi.shtml" TITLE="Andi">
+	<AREA SHAPE=RECT COORDS="115,4,212,47" HREF="becky.shtml" TITLE="Becky">
+	<AREA SHAPE=RECT COORDS="235,3,335,45" HREF="baz.shtml" TITLE="Simon">
+	<AREA SHAPE=RECT COORDS="353,3,455,43" HREF="james.shtml" TITLE="James">
+</MAP>
+</HTML>
