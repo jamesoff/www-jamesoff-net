@@ -63,4 +63,4 @@ exclude:
     - Gemfile
     - Gemfile.lock
 include:
-    - .htaccess
+    - _htaccess
