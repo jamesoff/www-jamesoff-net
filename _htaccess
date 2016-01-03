@@ -1,16 +1,17 @@
 ---
 ---
 RewriteEngine On
-RewriteBase /
+
+RewriteRule ^site/?$ / [R=301,L]
 
 {% for post in site.posts %}
 {% if post.original != null %}
-RewriteRule ^{{ post.original }} {{ post.url }} [R=301,L]
+RewriteRule ^{{ post.original | remove_first:'/'}} {{ post.url }} [R=301,L]
 {% endif %}
 {% endfor %}
 
 {% for page in site.pages %}
 {% if page.original != null %}
-RewriteRule ^{{ page.original }} {{ page.url }} [R=301,L]
+RewriteRule ^{{ page.original | remove_first:'/' }} {{ page.url }} [R=301,L]
 {% endif %}
 {% endfor %}
