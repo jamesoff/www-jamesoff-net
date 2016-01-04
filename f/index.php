@@ -1,32 +1,32 @@
 <?php
   include_once "../include/_database.phtml";
   if (!isset($nocount) && databaseConnect()) {
-	  $result = @mysql_query("SELECT hits FROM fail_hits");
-	  $hits = mysql_result($result,0,"hits");
-	  $hits++;
-	  $hits_string = "You are the $hits";
-	  $bling = (string)$hits;
-	  $endChar = $bling{strlen($bling)-1};
-	  switch ($endChar) {
-		  case "1": $append .= "st"; break;
-		  case "2": $append .= "nd"; break;
-		  case "3": $append .= "rd"; break;
-		  default:
-			  $append .= "th";
-	  }
+      $result = @mysql_query("SELECT hits FROM fail_hits");
+      $hits = mysql_result($result,0,"hits");
+      $hits++;
+      $hits_string = "You are the $hits";
+      $bling = (string)$hits;
+      $endChar = $bling{strlen($bling)-1};
+      switch ($endChar) {
+          case "1": $append .= "st"; break;
+          case "2": $append .= "nd"; break;
+          case "3": $append .= "rd"; break;
+          default:
+              $append .= "th";
+      }
 
-	  $endChars = substr($bling, strlen($bling)-2);
-	  switch ($endChars) {
-		  case "11": case "12": case "13": $append = "th"; break;
-	  }
+      $endChars = substr($bling, strlen($bling)-2);
+      switch ($endChars) {
+          case "11": case "12": case "13": $append = "th"; break;
+      }
 
-	  $hits_string .= "$append stupid person to be directed to this page.";
+      $hits_string .= "$append stupid person to be directed to this page.";
 
-	  @mysql_query("UPDATE fail_hits SET hits='$hits'");
+      @mysql_query("UPDATE fail_hits SET hits='$hits'");
 
   }
   else {
-	  $hits_string = "";
+      $hits_string = "";
   }
 
   $taunts = array(
@@ -39,7 +39,7 @@
 
   $fontsize = 150;
   if (strlen($taunt) > 6) {
-	  $fontsize = 120;
+      $fontsize = 120;
   }
 ?>
 
