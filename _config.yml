@@ -75,3 +75,4 @@ sitemap:
         - /css/pixyll.scss
     include_posts:
         - /index.html
+highlighter: rouge
