@@ -56,7 +56,6 @@ paginate:     4
 sass:
   compressed: true
 gems:
-  - jekyll-sitemap
   - jekyll-paginate
 exclude:
     - vendor
@@ -65,3 +64,14 @@ exclude:
     - Gemfile.lock
 include:
     - _htaccess
+sitemap:
+    exclude:
+        - /googleff360c83a8c3e0c4.html
+        - /404.md
+        - /archive
+        - f/index.html
+        - /feed.xml
+        - /_htaccess
+        - /css/pixyll.scss
+    include_posts:
+        - /index.html
