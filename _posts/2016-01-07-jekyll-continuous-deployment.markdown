@@ -11,7 +11,7 @@ So here's how I'm doing it.
 
 ### High-level overview
 
-My webhost limited SSH connections to a few trusted hosts, so I could have set up Travis to do SSH-based deployment via a jump host. However, I decided to get Travis to put the deployable site somewhere and then poke the server to fetch it. Travis deploys the built `_site` folder to an S3 bucket, and then I use the webhook notification method to kick off a script on the server. The script downloads the S3 bucket to a temporary folder, and then swaps symlinks around to point the webserver at the new version. Both the Travis build and my script send notifications to a Slack instance for me to keep an eye on things.
+My webhost limits SSH connections to a few trusted hosts, so I could have set up Travis to do SSH-based deployment via a jump host. However, I decided to get Travis to put the deployable site somewhere and then poke the server to fetch it. Travis deploys the built `_site` folder to an S3 bucket, and then I use the webhook notification method to kick off a script on the server. The script downloads the S3 bucket to a temporary folder, and then swaps symlinks around to point the webserver at the new version. Both the Travis build and my script send notifications to a Slack instance for me to keep an eye on things.
 
 ### Travis config
 
