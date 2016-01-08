@@ -2,6 +2,9 @@
 ---
 
 rewrite ^/site/?$ / permanent;
+rewrite ^/go/quoteengine https://github.com/jamesoff/eggdrop-scripts/tree/master/QuoteEngine;
+rewrite ^/irc/irssi.php https://github.com/jamesoff/irssi-scripts;
+rewrite ^/go/topicengine https://github.com/jamesoff/eggdrop-scripts/tree/master/TopicEngine;
 
 {% for post in site.posts %}
 {% if post.original != null %}
