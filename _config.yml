@@ -74,6 +74,7 @@ sitemap:
         - /_htaccess
         - /css/pixyll.scss
         - /nginx-rewrites
+        - /BingSiteAuth.xml
     include_posts:
         - /index.html
 highlighter: rouge
