@@ -73,6 +73,7 @@ sitemap:
         - /feed.xml
         - /_htaccess
         - /css/pixyll.scss
+        - /nginx-rewrites
     include_posts:
         - /index.html
 highlighter: rouge

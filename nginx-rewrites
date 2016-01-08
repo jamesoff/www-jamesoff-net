@@ -1,0 +1,16 @@
+---
+---
+
+rewrite ^/site/?$ / permanent;
+
+{% for post in site.posts %}
+{% if post.original != null %}
+rewrite ^{{ post.original }} {{ post.url }} permanent;
+{% endif %}
+{% endfor %}
+
+{% for page in site.pages %}
+{% if page.original != null %}
+rewrite ^{{ page.original }} {{ page.url }} permanent;
+{% endif %}
+{% endfor %}
