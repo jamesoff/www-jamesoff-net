@@ -148,12 +148,23 @@ mv ${NEWDIR}/_htaccess ${NEWDIR}/.htaccess
 echo Switching symlink...
 rm -f ${ROOTDIR}/jamesoff.net && ln -s $NEWDIR ${ROOTDIR}/jamesoff.net
 
+# nginx looks for this file, so if it's missing for some reason, make an empty one
+[ -f ${ROOTDIR}/jamesoff.net/nginx-rewrites ] || touch ${ROOTDIR}/jamesoff.net/nginx-rewrites
+
+nginx -t && nginx -s reload
+
 [ -z "$OLDDIRS" ] && send_notification && exit 0
 
 echo Removing old dirs
 rm -rf $OLDDIRS
 send_notification
 {% endhighlight %}
+
+The script makes a new directory with a unqiue name, and mirrors the S3 bucket into it. It moves the `.htaccess` file to the correct name (having it start with a `.` meant it was missed by Travis's deployment step). This is not now used since I switched to nginx, so I shall remove it soon. It then checks the `nginx-rewrites` file exists, and if not makes a blank one. nginx includes this file from its configuration, so if it's missing it will be sad. It then checks the nginx config is still valid, and then reloads it (so nginx notices changes to the rewrites file).
+
+If there are no old directories (typically only true the very first time you run the script) it sends the success notification, and exits. If there are any old directories, they're now removed then the notification is send and the script exits.
+
+The notification is sent using a POST to a Slack webhook, which is set up from Slack's configuration. The configuration will give you the URL to hit, including some tokens.
 
 ### Missing bits
 
