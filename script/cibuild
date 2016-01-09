@@ -1,7 +1,19 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 bundle exec jekyll build
 
 bundle exec htmlproof ./_site --disable-external
+
+sudo cp _site/nginx-rewrites /etc/nginx/conf.d/nginx-rewrites
+cat > test.conf <<EOF
+server {
+	listen 80;
+
+	include /etc/nginx/conf.d/nginx-rewrites;
+}
+EOF
+sudo mv test.conf /etc/nginx/conf.d/test.conf
+sudo nginx -t
+
