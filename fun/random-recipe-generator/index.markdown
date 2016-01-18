@@ -65,13 +65,3 @@ function formatReceipe(data) {
 $(window).load(fetchRecipe());
 // ]]</script>
 
-<script type="text/javascript">// <![CDATA[
-google_ad_client = "ca-pub-0025928419571515";
-/* RRG page */
-google_ad_slot = "7833875895";
-google_ad_width = 468;
-google_ad_height = 60;
-// ]]></script>
-<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">// <![CDATA[
-// ]]></script>
-
