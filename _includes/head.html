@@ -29,7 +29,8 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title | xml_escape }}">
-	<meta property="og:author" content="James Seward">
+	<meta property="og:author:profile:first_name" content="James">
+	<meta property="og:author:profile:last_name" content="Seward">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
@@ -39,7 +40,7 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-        
+
     {% if site.google_analytics %}
     <script type="text/javascript">
       var _gaq = _gaq || [];
