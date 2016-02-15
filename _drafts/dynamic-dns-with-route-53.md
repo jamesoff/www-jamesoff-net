@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DIY Dynamic DNS with Route 53
-excerpt: Updating a DNS entry to follow a dynamic Internet connection using Amazon Web Services.
+title: Dynamic DNS with Route 53
+excerpt: Updating a DNS entry to follow a dynamic Internet connection using Amazon Web Services' Route53.
 ---
 
 Years ago, I had a dynamic DNS mechanism set up to keep a record for my home Internet connection. It used SSH, a passwordless key, and SSH configuration to restrict what logging in with that key could do, and some scripts which probably barely held together to update a [djbdns](http://cr.yp.to/djbdns.html) data file, rebuild it, and rsync the output to my secondary. Now, my DNS is done with Amazon's Route 53, and one of the benefits of that is a nice API to update DNS entries, so I rewrote it. Here's how you can set it up too.
@@ -18,11 +18,11 @@ Anyway, on with the show:
 
 You will need:
 
-* A zone in Route 53, with an A record you plan to update
-* An SNS topic, to which the script will publish warnings if it has problems changing DNS
-* An IAM user with the right permissions to change the zone and publish to the SNS topic
-* Optionally, an external host to run the PHP reflection script, to show you your own IP. This could be an EC2 instance.
+* A zone in Route 53, with an A record you plan to update.
+* An SNS topic, to which the script will publish warnings if it has problems changing DNS.
+* An IAM user with the right permissions to change the zone and publish to the SNS topic.
 * A machine on the connection you're updating the DNS for with Python and the AWS boto and requests libraries installed. I'm using a Raspberry Pi.
+* Optionally, an external host to run the PHP reflection script, to show you your own IP. This could be an EC2 instance, if you wanted to stick to AWS.
 
 This guide assumes some experience with setting things up in AWS. If you need guidance for creating Route 53 entries, SNS topics, or IAM users, there are plenty of guides around.
 
@@ -67,6 +67,8 @@ The user will need a policy like this; substitute your own HostedZoneId in the f
 }
 {% endhighlight %}
 
+Create an access key/secret key pair for this user.
+
 ### Optional: Reflection script
 
 If you're happy to use my reflection endpoint (see notes in the first section), you can skip this section. You can also write your own script - it just needs to return a JSON object which has an error value of the empty string, and `your_ip` set to the IP of the client. `autodns.py` does not use the `forwarded` or `forwarded_for` values.
@@ -106,13 +108,22 @@ The only parameter not described above is the `alert_lock` - this is a file the 
 
 * Install the configuration file in `/usr/local/etc/autodns.json`. If you don't want to put it there, put it somewhere else, and pass the path to it as the first parameter to the script when you run it.
 * Ensure you have the [requests](http://docs.python-requests.org/en/latest/) and AWS boto 2 Python libraries installed. You can use `pip install -r requirements.txt` to do that.
+* Put the AWS credentials for the IAM user you created somewhere Boto will find them. You can put them in `~/.boto` if you're using a dedicated user to run the script, or you could use a wrapper script which sets the values in the environment.
 * Run the script as a test. It only outputs something if there's a problem. If it doesn't need to change the DNS entry, or successfully changes it, there will be no output.
-* Assuming it's working OK, create a cronjob to run the script at suitable intervals - say, every 5 or 10 minutes: 
+* Assuming it's working OK, create a cronjob to run the script at suitable intervals - say, every 5 or 10 minutes:
 
   `*/5 * * * * /path/to/python /path/to/autodns.py [/optionally/path/to/config.json]`
 
 Note that autodns does not need to run as a privileged user.
 
-## Cloudformation Template
+## CloudFormation Template
 
 In the code repo you can find `cloudformation.json` which is a [CloudFormation](http://aws.amazon.com/cloudformation) template which will create the DNS entry (in an existing zone), the SNS topic, and the IAM user & access keys for the script to use (i.e. the first three steps above). You will need to subscribe yourself to the SNS topic after creating the stack.
+
+## Improvements and feedback
+
+* At the moment, IPv6/AAAA records are not supported, mainly because my connection does not have IPv6.
+* It would be nice if Lambda could host the reflection API so that it didn't need a server, but I couldn't see that it's able to give the code the client IP (from API Gateway).
+* It should probably use boto3
+
+Pull requests are welcome :)
