@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jekyll and Continuous Deployment
+summary: How to set up travis CI to build and deploy your Jekyll site
 ---
 
 Having changed this site from WordPress to [Jekyll](http://jekyllrb.com) I thought it would be good to have some kind of automated deployment, so I could just `git commit` and push, and have the changes go live automatically.

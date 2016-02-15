@@ -2,6 +2,7 @@
 layout: post
 title: Dynamic DNS with Route 53
 excerpt: Updating a DNS entry to follow a dynamic Internet connection using Amazon Web Services' Route53.
+summary: How to set up your own dynamic DNS service with Amazon Web Services
 ---
 
 Years ago, I had a dynamic DNS mechanism set up to keep a record for my home Internet connection. It used SSH, a passwordless key, and SSH configuration to restrict what logging in with that key could do, and some scripts which probably barely held together to update a [djbdns](http://cr.yp.to/djbdns.html) data file, rebuild it, and rsync the output to my secondary. Now, my DNS is done with Amazon's Route 53, and one of the benefits of that is a nice API to update DNS entries, so I rewrote it. Here's how you can set it up too.
