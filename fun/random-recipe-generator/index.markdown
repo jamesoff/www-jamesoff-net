@@ -23,7 +23,7 @@ original: /site/fun/random-recipe-generator
 ---
 Below is a randomly-generated recipe!
 
-<div id="recipe">[mixing ingredients]</div>
+<div id="recipe">{% icon fa-cog fa-spin %} [mixing ingredients]</div>
 
 Yum.
 
