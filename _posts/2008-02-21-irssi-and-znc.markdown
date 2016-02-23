@@ -6,6 +6,8 @@ title: irssi and ZNC
 original: /site/2008/02/21/irssi-and-znc/
 comments: false
 ---
+{% icon fa-warning fa-lg fa-pull-left fa-border %} This post is out of date, and does not allow for newer versions of ZNC supporting mutliple networks per user.
+
 [ZNC](http://en.znc.in) is an IRC bouncer with some pretty nice features. For a number of reasons I wanted to move my ircing from home to a shell, so I decided to give ZNC a try. ZNC isn't in ports, but compiles fine using `gmake`.
 
 The only problem I encountered was getting it set up to work with multiple networks in irssi. Configuring ZNC itself to put me on many networks was easy enough, and when I connected irssi to it for each network using `/connect` it worked fine. Using `/server add` to set up irssi's server list didn't work out so well.
