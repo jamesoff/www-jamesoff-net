@@ -54,7 +54,7 @@ eos
     private
 
     def determine_arguments(input)
-      matched = input.match(/\A(\S+) ?((fa-[a-z0-9]+ ?)*)\Z/)
+      matched = input.match(/\A(\S+) ?((fa-[a-z0-9-]+ ?)*)\Z/)
       [matched[1].to_s.strip, matched[2].to_s.strip] if matched && matched.length >= 3
     end
 
