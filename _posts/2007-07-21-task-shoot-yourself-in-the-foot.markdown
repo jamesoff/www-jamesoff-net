@@ -6,6 +6,7 @@ title: 'TASK: Shoot yourself in the foot'
 original: /site/2007/07/21/task-shoot-yourself-in-the-foot/
 tags: []
 comments: false
+summary: A list of how to shoot yourself in the foot in different languages.
 ---
 Found this online somewhere while I was working at Grey Matter, and I've had it printed out ever since. So I can recycle the hardcopy, I'm reproducing it here. Feel free to add your own contributions in the comments :)
 

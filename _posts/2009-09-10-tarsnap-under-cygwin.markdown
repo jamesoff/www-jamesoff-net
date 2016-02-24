@@ -25,6 +25,7 @@ tags:
 - windows
 - backup
 comments: false
+summary: Installing the Tarsnap backup client on Windows with cygwin.
 ---
 To get [Tarsnap](https://www.tarsnap.com) working under cygwin, here's what you need to do:
 

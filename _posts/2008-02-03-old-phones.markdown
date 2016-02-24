@@ -5,6 +5,7 @@ published: true
 title: Old phones
 original: /site/2008/02/03/old-phones/
 comments: false
+summary: Some old mobile phones.
 ---
 While sorting out boxes of stuff hidden away in a cupboard (so I'd have less pointless stuff to carry around when we move house), I came across some of my old mobile phones.
 

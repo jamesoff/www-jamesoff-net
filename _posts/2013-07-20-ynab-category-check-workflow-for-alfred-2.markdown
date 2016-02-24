@@ -11,6 +11,7 @@ categories:
 - Mac OS X
 - alfred
 tags: []
+summary: An Alfred 2 workflow which looks up budget information from You Need A Budget.
 ---
 This is a workflow which lets you look up how much you have left in a [You Need a Budget](http://www.youneedabudget.com) category for the current month.
 

@@ -5,6 +5,7 @@ published: true
 title: irssi and ZNC
 original: /site/2008/02/21/irssi-and-znc/
 comments: false
+summary: Using the irssi IRC client with the ZNC bouncer
 ---
 {% icon fa-warning fa-lg fa-pull-left fa-border %} This post is out of date, and does not allow for newer versions of ZNC supporting mutliple networks per user.
 
