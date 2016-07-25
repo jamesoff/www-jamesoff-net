@@ -8,7 +8,7 @@ url:         "https://jamesoff.net"
 strapline:   a random code generator
 
 # Google analytics
-google_analytics:
+google_analytics: UA-325830-2
 
 # Optional features
 animated:           false
