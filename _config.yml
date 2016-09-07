@@ -57,6 +57,7 @@ sass:
   compressed: true
 gems:
   - jekyll-paginate
+  - jekyll-gist
 exclude:
     - vendor
     - script
