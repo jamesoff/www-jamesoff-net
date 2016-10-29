@@ -79,3 +79,9 @@ sitemap:
     include_posts:
         - /index.html
 highlighter: rouge
+image:
+  source: i
+  output: generated
+  presets:
+    half:
+      width: 400

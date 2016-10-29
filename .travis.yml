@@ -4,7 +4,7 @@ rvm:
 sudo: required
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -y nginx
+  - sudo apt-get install -y nginx imagemagick
 script: ./script/cibuild
 branches:
   only:
