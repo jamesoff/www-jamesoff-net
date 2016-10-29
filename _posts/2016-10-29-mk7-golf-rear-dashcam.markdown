@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mark 7 Golf Rear Dashcam wiring
-summary: How I wired my rear dashcam in to the Golf
+summary: How I wired my rear dashcam into the Golf
 ---
 Ever since having someone pull in front of me and stand on the brakes on the M11 in April 2012 (and then take me to court for whiplash), I've had a front dash cam. When I got the Golf R, I wanted a rear cam too, so I picked up a Mini 0805. (The front one is a Mio 518.) I also like tidy cabling, so this weekend I ran a USB cable from the camera to the 12V socket behind the trim. I'm just using a regular USB thing in the socket, not any kind of hard-wiring.
 
@@ -15,11 +15,11 @@ I used the [DAP Auto Parts rear LED lights install guide](https://www.youtube...
 * A 3m USB cable (shorter may work but the excess hides easily enough). I used a braided Anker one to match the sort of cables/cable management used by VW.
 * My trusty Gerber tool (mostly for snipping excess zip tie)
 
-Here's the result:
+### The result:
 
 {% image half golf-dashcam/IMG_3265.jpg alt="Rear dashcam installed" %} {% image half golf-dashcam/IMG_3263.jpg alt="End of USB cable by rear 12V socket" %}
 
-Here's how I did it:
+### How I did it
 
 1. Pull the trim off the inside of the boot hatch. It's attached by a number of christmas tree clips. I got my fingertips between the trim and the glass, starting at one end and gently pulled it away.
 
