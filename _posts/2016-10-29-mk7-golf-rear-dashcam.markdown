@@ -17,7 +17,7 @@ I used the [DAP Auto Parts rear LED lights install guide](https://www.youtube...
 
 Here's the result:
 
-{% image half golf-dashcam/IMG_3265.jpg %} {% image half golf-dashcam/IMG_3263.jpg %}
+{% image half golf-dashcam/IMG_3265.jpg alt="Rear dashcam installed" %} {% image half golf-dashcam/IMG_3263.jpg alt="End of USB cable by rear 12V socket" %}
 
 Here's how I did it:
 
@@ -25,20 +25,20 @@ Here's how I did it:
 
 2. Pull the trim off the inside of the hatch on the car. The attachment is the same arrangement as the first piece, and I did similar to remove it, except putting my fingertips under the trip behind the rubber seal to get at it.
 This is the insides of the two pieces so you can see where the clips are to pull against:
-{% image half golf-dashcam/IMG_3264.jpg %}
+{% image half golf-dashcam/IMG_3264.jpg alt="Two Golf Mark 7 trim pieces" %}
 
 3. Pop the ends of the rubber tube off the hatch and car. These have a solid tab one end, and a push-tab the other. You can't just pull them out - you need to push the tab. On the car this is easy as you can just see it; on the door it's a bit harder. I did it with a combination of pushing with my fingers through a hole in the metalwork, and a plastic trim tool. The push-tab on the hatch door is towards the offside of the car. Pic for reference, showing the car-body end:
-{% image half golf-dashcam/IMG_3261.jpg %}
+{% image half golf-dashcam/IMG_3261.jpg alt="Rubber cable tube removed from car" %}
 
 4. Feed your cable through. On my car it was quite a tight fit at each end, and I couldn't just push the cable through. Instead, I got a long zip tie and pushed that through ("lump" end first), then taped the connector on the cable to it and gently pulled it back through.
 (Apologies for this one being blurry; I'm not going back to the car to redo the process for a better photo ;) )
-{% image half golf-dashcam/IMG_3258.jpg %}
+{% image half golf-dashcam/IMG_3258.jpg alt="Blurry pic of USB cable taped to zip tie, ready to pull through tube" %}
 
 5. Zip tie the cable in place and clip the ends of the rubber tube back in. Run the cable across to the top of the C-pillar trim and start tucking it behind by pulling the rubber seal away. I found a trim tool useful here.
-{% image half golf-dashcam/IMG_3260.jpg %}
+{% image half golf-dashcam/IMG_3260.jpg alt="USB cable fed through boot hatch" %}
 
 6. At this point I realised it would be neater if I could get the cable to just appear by the socket instead of having to wrap it round the trim once I reached the right level, so I joined two zip ties together to make them long enough, and pushed them up behind the hard plastic trim with the boot light in, up into the void behind the C pillar trim. After several attempts I got the end of the zip tie in each to pull through, and taped the other end of the cable to it, and pulled the end through. The excess cable remains in the C pillar void.
-{% image half golf-dashcam/IMG_3262.jpg %}
+{% image half golf-dashcam/IMG_3262.jpg alt="USB cable taped to zip tie, ready to pull through C pillar void" %}
 
 7. Put all the trim back on; I found it easiest to just line one end up and pop that clip in, then do the other, and then just push along the rest knowing the remaining clips would all be lined up with the holes correctly. After that, make sure none of the rubber seal is trapped under the trim (and same down the C pillar trim edge).
 
