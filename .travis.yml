@@ -19,7 +19,7 @@ deploy:
   secret_access_key:
     secure: X13ts3pxBFbyoI9+A4KqIE6E/MGkv70KElgIwYeatreVXwgDn7JJSjWXz8S6E5BvTc+Oir7F4Q0WsonqpFIn1KKa3Z11XqdQ22b4iEgXKt5BPnuHBAxh5MnAudOfrp0oRSR9SK3yLVt2QuKJX/bAJUdq7q2lwzUg9VoJLfqwggtpAdlKdLXilA3D015j0IJocATIo7Ka8GMe/wl+A9rQmVElQS7VmSnxzb5lOKGItEG38N/6BMxB5L5LJ1ugXmbipGKDfGqV6xFcorq/PcgKws51Q4l11mR6lXZ8FprheIEenAdQb5JRyrJ71WSwPFaZmLozWj1i38bGpKiKBHGTQfEPUO2QBZHC424TzGkpsDMoExF2Bv6an+3vjoAWJUEru5+/H/8ABEJdeo0m6tCoJqPDVrKtSyGoe/QATB6yZz2PpKRdXdU5EcM+o8dH0pN62Kh37ySSn2LKv99AMLaaMhMr7PJHDnA4FDko/8LuH80m0Vx1FxooZmoD3JW2LzucFHUCACLfScMsC9ahaVYagxRErKWPGDZfq1aMGYfjzl313pDUt7xXd54v2H8mlisG0CrnncNO+DGVwrbZKSicswoAejCmH8mtQN3hXBf71OItQglkrm+inKGQSdmfD5pGxohf/5cleTiOeMwxYGlahWfbS5Mq/bdbI7U6RBij9jA=
   bucket: net-jamesoff-www
-  local-dir: _site
+  local-dir: _build
   acl: private
   on:
     repo: jamesoff/www-jamesoff-net

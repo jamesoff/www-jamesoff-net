@@ -16,4 +16,5 @@ server {
 EOF
 sudo mv test.conf /etc/nginx/conf.d/test.conf
 sudo nginx -t
-
+mkdir _build
+tar cjvf _site _build/site.tar.bz2
