@@ -35,7 +35,7 @@ Insufficiently delicious? <input id="refresh" type="button" value="Refresh!" onc
 <script type="text/javascript">// <![CDATA[
 
 function fetchRecipe() {
-	var api_url = "https://qc52142qog.execute-api.eu-west-1.amazonaws.com/prod/recipe";
+	var api_url = "https://k85phusqf3.execute-api.eu-west-1.amazonaws.com/prod/recipe";
 	$.getJSON(api_url, function(data) {
 		$("div#recipe").replaceWith(
 			formatReceipe(data)
