@@ -89,7 +89,7 @@ test empty_queue-1 "queue should start empty" -body {
 } -result 0
 ```
 
-Since bMotion is loaded into our interpreter, the only way it can do stuff is if we call it, which means there's no danger of it deciding to put output in the queue.
+Since bMotion is loaded into our interpreter, the only way it can do stuff is if we call it, which means there's no danger of it deciding to put output in the queue by itself.
 
 The test file then needs to end with a call to `cleanupTests` as mentioned above.
 
@@ -167,7 +167,7 @@ exit 0
 
 This script is wired up as the `script` field in the Travis configuration file, and now when pushing to Github Travis will spring into life and run the tests:
 
-{% image half bmotion-tests.png %}
+{% image big bmotion-tests.png %}
 
 ## The eggdrop shim
 
@@ -273,4 +273,4 @@ eggdrop shim loading
 
 The `e` command sends an event to bMotion as though the text had come from IRC, which bMotion responds to by sending some text to the queue. The `q` command then runs the queue (usually this happens once every second so or with a timer in eggdrop). The first time, there is no output as the queued message is marked as being delayed by 2s. The output from the first time is the queue item showing it has 1s left, and will send `Howdy.` to #bmotion. The 2nd call then outputs the text to IRC. The `[HELP]` indicates that the text is sent to eggdrop's "help" IRC output queue, which is its lowest-priority one.
 
-Now all I need to do is write some more tests!
+Now all I need to do is write some more tests! There's also a mechanism in tcltest which can capture output and validate it, which I need to look in to.
