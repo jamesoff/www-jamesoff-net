@@ -86,3 +86,5 @@ image:
   presets:
     half:
       width: 400
+    big:
+      width: 800
