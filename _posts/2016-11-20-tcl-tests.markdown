@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Using tcltest
-summary: Using tcltest for automated builds with Travis
+title: Using tcltest with bMotion
+summary: Using tcltest for automated builds with Travis to verify bMotion's code
 ---
 For a while now I've wanted to have automated tests for [bMotion](http://www.bmotion.net). It doesn't help that there seems to be no useful linting for TCL, so it's hard to catch things like mismatched brackets in the editor. TCL itself makes tracking down problems difficult too (maybe it's just TCL inside eggdrop) as it doesn't give the location of a failed script, but instead just reports the initial function which was invoked (i.e. the event handler).
 
@@ -30,6 +30,8 @@ I've been pondering getting Travis to do some kind of automated tests against an
 1. Also bMotion's output isn't quite deterministic enough for that to work - aside from the fact that each trigger can pick from a number of outputs, make typos and transform them with prefixes and postfixes
 
 I then considered using eggdrop just as a test harness and writing a unit testing script which would run alongside bMotion inside that. Again, this presented some problems around getting sensible output from that process for testing.
+
+## Using tcltest
 
 The next iteration of my thinking was that the reason I needed to run bMotion inside eggdrop was because bMotion uses some eggdrop-specific functions it provides, so maybe I could just write a shim which provided a minimally functional eggdrop-like interface so bMotion would execute. This could then run in a test harness which would call bMotion's functions and verify the return values. A quick Google later revealed the existence of the [tcltest](http://www.tcl.tk/man/tcl8.5/TclCmd/tcltest.htm) package which "provides several utility commands useful in the construction of test suites for code instrumented to be run by evaluation of Tcl commands."
 
@@ -120,6 +122,8 @@ Sourced 1 Test Files.
 
 Hooray!
 
+## Running the tests with Travis
+
 Let's get Travis to run those tests, so we'll make `.travis.yml` look something like this:
 
 ```yaml
@@ -127,10 +131,10 @@ addons:
   apt:
     packages:
     - tcl-dev
-script: tclsh tests/run-tests.tcl
+script: tests/run-tests.sh
 ```
 
-This seems fine until we decide to verify that a failing test breaks the build, and it doesn't.
+The script copies the sample settings file into place so bMotion can load, then runs the `run-tests.tcl` file. This seems fine until we decide to verify that a failing test breaks the build, and it doesn't.
 
 It turns out that tcltest doesn't set an exit code or any kind of return value based on if the tests all passed or not.
 
@@ -160,3 +164,113 @@ grep -qF 'Test files exiting with errors' "$logfile" && exit 1
 # consume grep's error if the were no matches
 exit 0
 ```
+
+This script is wired up as the `script` field in the Travis configuration file, and now when pushing to Github Travis will spring into life and run the tests:
+
+{% image half bmotion-tests.png %}
+
+## The eggdrop shim
+
+This section is less about tcltest and more about how I made bMotion run outside of eggdrop.
+
+bMotion uses a number of eggdrop-provided TCL functions - not least of all those related to receiving events from IRC and sending text back that way. However, there's also things like user management (so bMotion can store your IRL names), timers, rand (eggdrop provides a wrapped version of TCL's own) and others. Running bMotion outside of eggdrop in tclsh results very quickly in it failing as it tries to call an eggdrop function.
+
+In order to allow the test environment to run the script, I created a TCL script with stub functions so that bMotion can work. This also means that I can do some behind-the-scenes checking or changes, so the test environment can validate that e.g. bMotion created times or binds (to events) it should have, or the return values from eggdrop functions can be loaded in order to test certain code paths.
+
+Most of the shim functions just, currently, output text saying they were called. Those which write eggdrop log messages, or send output to IRC, display that text labelled as such.
+
+The shim file is sourced by each test file, before it sources bMotion's main file. I also created a script with some interactive helper functions which sources the shim and bMotion, which can be used in tclsh for interactively testing bMotion. Using it looks a bit like this:
+
+```
+~/s/bmotion % tclsh
+% source tests/bMotion-test.tcl
+eggdrop shim loading
+[SHIM] setudef
+[LOG] (d) bMotion: bMotion_testing is not defined, setting to 0.
+[LOG] bMotion 0.1.0+svn starting up...
+[LOG] (d) (d)bMotion: loaded settings from modules directory
+[LOG] bMotion: loaded settings from the following files: ./modules/settings.tcl
+[SHIM] bind join - *!*@* bMotion_event_onjoin
+[SHIM] bind mode - * bMotion_event_mode
+[SHIM] bind pubm - * bMotion_event_main
+[SHIM] bind sign - * bMotion_event_onquit
+[SHIM] bind nick - * bMotion_event_nick
+[SHIM] bind part - * bMotion_event_onpart
+[SHIM] bind ctcp - ACTION bMotion_event_action
+[SHIM] bind pub - !mood pubm_moodhandler
+[SHIM] bind pub - !bminfo bMotionInfo
+[SHIM] bind pub - !bmstats bMotionStats
+[SHIM] bind msg - bmotion msg_bmotioncommand
+[SHIM] bind pub - !bmadmin bMotionAdminHandler
+[SHIM] bind pub - !bmotion bMotionAdminHandler2
+[SHIM] bind pub - .bmotion bMotionAdminHandler2
+[SHIM] bind dcc m mood moodhandler
+[SHIM] bind dcc m bmotion* bMotion_dcc_command
+[SHIM] bind dcc m bmadmin* bMotion_dcc_command
+[SHIM] bind dcc m bmhelp bMotion_dcc_help
+[SHIM] bind time - {* * * * *} bMotion_check_tired2
+[SHIM] channel method get
+[SHIM] channel method get
+[LOG] (d) (d)bMotion: sleepy: next state change at 1480030860 = Thu Nov 24 23:41:00 GMT 2016
+[LOG] (d) (d)bMotion:  system module loaded
+[SHIM] bind time - {* * * * *} bMotion_abstract_auto_gc
+[LOG] (d) (d)bMotion: loading system abstracts for lang en
+[LOG] (d) (d)bMotion: abstract generic_greeting reduced by 1 items with filter %%!% %VAR{food}
+[LOG] (d) (d)bMotion: abstract answerDoyous reduced by 1 items with filter %ruser
+[LOG] (d) (d)bMotion: Abstract sillyVerbs has too many elements (632 > 600), tidying up
+[SHIM] rand
+
+(snipped a lot of output)
+
+[LOG] (d) (d)bMotion: Running a level 5 self-diagnostic...
+[LOG] bMotion: diagnostics indicate you haven't loaded the userinfo TCL script
+[LOG]          this is not required, but is strongly recommended
+[LOG] (d) (d)bMotion: running level 3 diagnostic on binds
+[SHIM] timer: 10 driftmood
+[SHIM] rand
+[SHIM] timer: 25 doRandomStuff
+[SHIM] rand
+[SHIM] utimer: 1743 bMotion_interbot_next_elect
+[SHIM] timer: 10 bMotion_mood_drift_timer
+[LOG] (d) (d)bMotion: running level 4 diagnostic on utimers
+[SHIM] utimers
+[LOG] (d) (d)bMotion: running level 4 diagnostic on timers
+[SHIM] timers
+[LOG] bMotion 0.1.0+svn AI online :D
+[LOG] bMotion is Copyright (C) 2001-2012 James Seward. bMotion comes with ABSOLUTELY NO WARRANTY;
+[LOG] This is free software, and you are welcome to redistribute it under certain conditions.
+[LOG] See the COPYRIGHT file for details. See bMotion.tcl to hide this message once you have read it.
+===== bMotion test environment
+      q: run event queue
+      e <text>: inject channel event
+
+% e "notopic: test"
+[SHIM] matchattr
+[SHIM] matchattr
+[SHIM] channel method get
+[SHIM] matchattr
+[SHIM] rand
+[SHIM] rand
+[SHIM] rand
+[SHIM] validuser
+[SHIM] rand
+[SHIM] validuser
+[SHIM] rand
+[SHIM] validuser
+[SHIM] rand
+[SHIM] channel method get
+
+(snip)
+
+[SHIM] chandname2name
+% q
+{1 #bmotion Howdy.}
+% q
+[HELP] PRIVMSG #bmotion :Howdy.
+% q
+%
+```
+
+The `e` command sends an event to bMotion as though the text had come from IRC, which bMotion responds to by sending some text to the queue. The `q` command then runs the queue (usually this happens once every second so or with a timer in eggdrop). The first time, there is no output as the queued message is marked as being delayed by 2s. The output from the first time is the queue item showing it has 1s left, and will send `Howdy.` to #bmotion. The 2nd call then outputs the text to IRC. The `[HELP]` indicates that the text is sent to eggdrop's "help" IRC output queue, which is its lowest-priority one.
+
+Now all I need to do is write some more tests!
