@@ -167,7 +167,7 @@ exit 0
 
 This script is wired up as the `script` field in the Travis configuration file, and now when pushing to Github Travis will spring into life and run the tests:
 
-{% image big bmotion-tests.png %}
+{% image big bmotion-tests.png alt="bMotion tests running on travis-ci.org" %}
 
 ## The eggdrop shim
 
