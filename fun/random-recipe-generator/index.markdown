@@ -52,7 +52,7 @@ function formatRecipe(data) {
   var HTML = '<div id="recipe">';
   HTML += '<h2>' + data.title + '</h2>';
   HTML += '<div class="recipe_serves">Serves ' + data.serves + '</div>';
-  HTML += '<ul class="recipe_needs">You will need:';
+  HTML += 'You will need:<ul class="recipe_needs">';
   data.ingredients.forEach(function(i) {
     HTML += "<li>" + i + "</li>";
   });
