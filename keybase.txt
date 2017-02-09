@@ -1,0 +1,52 @@
+https://keybase.io/jamesoff
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jamesoff.net
+  * I am jamesoff (https://keybase.io/jamesoff) on keybase.
+  * I have a public key ASBSO3lGnQgxcM5X_Ze4NCcJMHoRwGx9GRzpsmj-jxJAXgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120523b79469d083170ce57fd97b8342709307a11c06c7d191ce9b268fe8f12405e0a",
+            "host": "keybase.io",
+            "kid": "0120523b79469d083170ce57fd97b8342709307a11c06c7d191ce9b268fe8f12405e0a",
+            "uid": "ee80f10460cb3c7366cdd218453a1619",
+            "username": "jamesoff"
+        },
+        "service": {
+            "hostname": "jamesoff.net",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1486643001,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1486642975,
+        "hash": "10650aed01715b8e9bfe9cfdaa0e7080a02116bb2f3c8eb5062ac0bfd13640f1da97b6ff23dc8ea9aee4f462b50746e989853d825cba789a6c42ddbe3d121e36",
+        "seqno": 856663
+    },
+    "prev": "fec102f127cee2eac3d3c78733eb88715530880d7763679817961e9aff9e3692",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgUjt5Rp0IMXDOV/2XuDQnCTB6EcBsfRkc6bJo/o8SQF4Kp3BheWxvYWTFAvR7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNTIzYjc5NDY5ZDA4MzE3MGNlNTdmZDk3YjgzNDI3MDkzMDdhMTFjMDZjN2QxOTFjZTliMjY4ZmU4ZjEyNDA1ZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTIzYjc5NDY5ZDA4MzE3MGNlNTdmZDk3YjgzNDI3MDkzMDdhMTFjMDZjN2QxOTFjZTliMjY4ZmU4ZjEyNDA1ZTBhIiwidWlkIjoiZWU4MGYxMDQ2MGNiM2M3MzY2Y2RkMjE4NDUzYTE2MTkiLCJ1c2VybmFtZSI6ImphbWVzb2ZmIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJqYW1lc29mZi5uZXQiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4NjY0MzAwMSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg2NjQyOTc1LCJoYXNoIjoiMTA2NTBhZWQwMTcxNWI4ZTliZmU5Y2ZkYWEwZTcwODBhMDIxMTZiYjJmM2M4ZWI1MDYyYWMwYmZkMTM2NDBmMWRhOTdiNmZmMjNkYzhlYTlhZWU0ZjQ2MmI1MDc0NmU5ODk4NTNkODI1Y2JhNzg5YTZjNDJkZGJlM2QxMjFlMzYiLCJzZXFubyI6ODU2NjYzfSwicHJldiI6ImZlYzEwMmYxMjdjZWUyZWFjM2QzYzc4NzMzZWI4ODcxNTUzMDg4MGQ3NzYzNjc5ODE3OTYxZTlhZmY5ZTM2OTIiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEB+Rj+OxoyIJn5MKrzFG3g+BS7Hnai4sPhwi+gq+m3wzWpSnIEyqA7c6vq+75Qj6s/tyZAn9/J+CIVU2n+1CnwLqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgWbI0J/f/UJ4UGiQdYDrujjLH0jRhMIhMqEFt2Je7t2yjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jamesoff
+
