@@ -33,7 +33,7 @@
 <div id="gear">Please get it in gear at your earliest convenience.</div>
 </td></tr>
 </table>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">// <![CDATA[
 
 	function changeWord() {
@@ -55,7 +55,7 @@
 
 
     function fetchFails() {
-        var api_url = "https://idz7b48rc7.execute-api.eu-west-1.amazonaws.com/prod/fails";
+        var api_url = "https://api.jamesoff.net/fails/";
         $.getJSON(api_url, function(data) {
         	update(data);
 		}
