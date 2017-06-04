@@ -9,6 +9,8 @@ rewrite ^/site/code/simplemonitor https://jamesoff.github.io/simplemonitor/;
 
 rewrite ^/site/wp-content/uploads/2008/02/(.+)\.jpg /i/old/oldphones/$1.jpg;
 
+rewrite ^/site/code/eggdrop-scripts/quoteengine https://github.com/jamesoff/eggdrop-scripts/tree/master/QuoteEngine;
+
 {% for post in site.posts %}
 {% if post.original != null %}
 rewrite ^{{ post.original }} {{ post.url }} permanent;
