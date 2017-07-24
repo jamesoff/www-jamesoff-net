@@ -25,15 +25,27 @@ Below is a randomly-generated recipe!
 
 <div id="recipe">{% icon fa-cog fa-spin %} [mixing ingredients]</div>
 
-Yum.
+<div id="yum">Yum.</div>
 
 Insufficiently delicious? <input id="refresh" type="button" value="Refresh!" onclick="fetchRecipe();" />
+
+Insufficiently insane? <input id="refreshinsane" type="button" value="Refresh insane mode!" onclick="fetchInsane();" />
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">// <![CDATA[
 
-function fetchRecipe() {
-  var api_url = "https://uoaju73yq1.execute-api.eu-west-1.amazonaws.com/prod/recipe";
+function fetchInsane() {
+  fetchRecipe(true);
+}
+
+function fetchRecipe(insane=false) {
+  var api_url = "https://api.jamesoff.net/recipe?insane=";
+  if (insane) {
+    api_url += 'true'
+  }
+  else {
+    api_url += 'false';
+  }
   $.getJSON(api_url, function(data) {
     $("div#recipe").replaceWith(
       formatRecipe(data)
@@ -45,7 +57,8 @@ function fetchRecipe() {
 }
 
 function formatRecipeError() {
-  $("div#recipe").replaceWith("<div id='recipe'>Oh no, dropped all the ingredients on the floor, sorry :(</div>");
+$("div#recipe").replaceWith("<div id='recipe'>Oh no, dropped all the ingredients on the floor, sorry :(<br /></div>");
+  $("div#yum").replaceWith("<div id='yum' style='text-decoration: line-through'>Yum.</div>");
 }
 
 function formatRecipe(data) {
@@ -68,5 +81,17 @@ function formatRecipe(data) {
 }
 
 $(window).load(fetchRecipe());
+
+$(document).keydown(function (e) {
+  if (e.which == 82) {
+    // r
+    fetchRecipe();
+  }
+  if (e.which == 73) {
+    // i
+    fetchInsane();
+  }
+  return false;
+});
 // ]]</script>
 
