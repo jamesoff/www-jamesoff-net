@@ -27,9 +27,9 @@ Below is a randomly-generated recipe!
 
 <div id="yum">Yum.</div>
 
-Insufficiently delicious? <input id="refresh" type="button" value="Refresh!" onclick="fetchRecipe();" />
+Insufficiently delicious? <input id="refresh" type="button" value="Refresh!" onclick="fetchRecipe();" /> <kbd>R</kbd>
 
-Insufficiently insane? <input id="refreshinsane" type="button" value="Refresh insane mode!" onclick="fetchInsane();" />
+Insufficiently insane? <input id="refreshinsane" type="button" value="Refresh insane mode!" onclick="fetchInsane();" /> <kbd>I</kbd>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">// <![CDATA[
