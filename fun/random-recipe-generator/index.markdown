@@ -40,12 +40,9 @@ function fetchInsane() {
 }
 
 function fetchRecipe(insane=false) {
-  var api_url = "https://api.jamesoff.net/recipe?insane=";
+  var api_url = "https://api.jamesoff.net/recipe";
   if (insane) {
-    api_url += 'true'
-  }
-  else {
-    api_url += 'false';
+    api_url += '-insane'
   }
   $.getJSON(api_url, function(data) {
     $("div#recipe").replaceWith(
