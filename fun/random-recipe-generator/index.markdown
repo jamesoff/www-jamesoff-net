@@ -84,12 +84,13 @@ $(document).keydown(function (e) {
   if (e.which == 82) {
     // r
     fetchRecipe();
+	return false;
   }
   if (e.which == 73) {
     // i
     fetchInsane();
+	return false;
   }
-  return false;
 });
 // ]]</script>
 
