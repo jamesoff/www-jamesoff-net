@@ -14,9 +14,17 @@ function fetchRecipe(insane=false) {
         $("div#recipe").replaceWith(
             formatRecipe(data)
         );
+        $("div#share").replaceWith(
+            "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
+        );
+        recipe_id = data.metadata.recipe_id;
     } )
         .fail(function() {
             formatRecipeError();
+            $("div#share").replaceWith(
+                "<div id='share'></div>"
+            );
+            recipe_id = '';
         } );
 }
 
