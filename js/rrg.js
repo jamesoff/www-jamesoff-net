@@ -18,6 +18,7 @@ function fetchRecipe(insane=false) {
             "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
         );
         recipe_id = data.metadata.recipe_id;
+        location.hash = '';
     } )
         .fail(function() {
             formatRecipeError();
@@ -55,23 +56,31 @@ function formatRecipe(data) {
 }
 
 
+function writeSharebutton() {
+    $("div#share").replaceWith(
+        "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
+    );
+}
+
+
+function clearShareButton() {
+    $("div#share").replaceWith(
+        "<div id='share'></div>"
+    );
+}
+
+
 function fetchSpecificRecipe(recipe_id) {
     $.getJSON("https://rrg.jamesoff.net/" + recipe_id + ".json", function(data) {
         $("div#recipe").replaceWith(
             formatRecipe(data)
         );
-        $("div#share").replaceWith(
-            "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
-        );
+        writeSharebutton();
         recipe_id = data.metadata.recipe_id;
-        console.log(recipe_id);
-        console.log(data);
     } )
         .fail(function() {
             formatRecipeError();
-            $("div#share").replaceWith(
-                "<div id='share'></div>"
-            );
+            clearShareButton();
             recipe_id = '';
         } );
 }
@@ -93,7 +102,7 @@ function shareRecipe() {
 function giveShareLink() {
     var share_url = 'https://jamesoff.net/rrg/' + recipe_id;
     $("div#share").replaceWith(
-        "<div id='share'><a href='" + share_url + "'>" + share_url + "</a></div>"
+        "<div id='share'>Sharable link: <a href='" + share_url + "'>" + share_url + "</a></div>"
     );
 }
 
