@@ -19,7 +19,6 @@ categories:
   - Uncategorized
 tags: []
 comments: false
-original: /site/fun/random-recipe-generator
 summary: A randomly generated recipe! Manufacture and consume with care.
 ---
 Below is a randomly-generated recipe!
