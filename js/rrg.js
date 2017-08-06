@@ -56,6 +56,8 @@ function fetchSpecificRecipe(recipe_id) {
             "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
         );
         recipe_id = data.metadata.recipe_id;
+        console.log(recipe_id);
+        console.log(data);
     } )
         .fail(function() {
             formatRecipeError();
