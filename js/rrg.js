@@ -70,13 +70,13 @@ function clearShareButton() {
 }
 
 
-function fetchSpecificRecipe(recipe_id) {
-    $.getJSON("https://rrg.jamesoff.net/" + recipe_id + ".json", function(data) {
+function fetchSpecificRecipe(rid) {
+    $.getJSON("https://rrg.jamesoff.net/" + rid + ".json", function(data) {
         $("div#recipe").replaceWith(
             formatRecipe(data)
         );
-        writeSharebutton();
-        recipe_id = data.metadata.recipe_id;
+        recipe_id = rid;
+        giveShareLink()
     } )
         .fail(function() {
             formatRecipeError();
