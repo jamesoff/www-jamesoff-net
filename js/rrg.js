@@ -93,7 +93,7 @@ function shareRecipe() {
 function giveShareLink() {
     var share_url = 'https://jamesoff.net/rrg/' + recipe_id;
     $("div#share").replaceWith(
-        "<div id='share'><a href='" + url + "'>" + share_url + "</a></div>"
+        "<div id='share'><a href='" + share_url + "'>" + share_url + "</a></div>"
     );
 }
 
