@@ -39,6 +39,7 @@
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 
     {% if site.google_analytics %}
+        {% if jekyll.environment == "production" %}
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
@@ -49,5 +50,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+        {% endif %}
     {% endif %}
 </head>
