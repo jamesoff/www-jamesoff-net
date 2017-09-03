@@ -247,8 +247,8 @@ fixes it.
 
 ### zsh
 
-[zsh](http://www.zsh.org) has excellent tab completion for tmux. Additionally, since I use it be
-default, I have this at the end of my `zshrc`:
+[zsh](http://www.zsh.org) has excellent tab completion for tmux. Additionally,
+since I use it by default, I have this at the end of my `zshrc`:
 
 {% highlight zsh %}
 # show available tmux sessions
