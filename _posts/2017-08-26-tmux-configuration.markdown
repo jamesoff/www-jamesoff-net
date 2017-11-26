@@ -128,7 +128,7 @@ If the `aggressive-resize` option is enabled (which it is by the
 when it can, which means that selecting a different window in the smaller
 client will free up the larger client to resize the window to the full size.
 
-{% image tmux/smaller-client.png alt="Screenshot of tmux showing a window constrained by a smaller client" %}
+{% image big tmux/smaller-client.png alt="Screenshot of tmux showing a window constrained by a smaller client" %}
 
 To move a window between session (groups), for example if it was created in the
 wrong session group, you can bring it to your current session (group) with {%
@@ -162,7 +162,7 @@ items on my status bar are:
 * system load, from my [tmux-loadavg plugin](https://github.com/jamesoff/tmux-loadavg) (right aligned). This changes from green to orange to red as the load increases.
 * short hostname (right aligned)
 
-{% image tmux/status-bar.png alt="A screenshot of tmux status bar" %}
+{% image big tmux/status-bar.png alt="A screenshot of tmux status bar" %}
 
 The formatting and style is similar to that of
 [powerline](https://github.com/powerline/powerline) and indeed I used powerline
@@ -355,7 +355,7 @@ list with {% kbd / %} like `less`.
 
 ## Conclusion
 
-{% image tmux/tmux.png alt="Screenshot of iTerm2 showing my tmux session with cowsay" %}
+{% image big tmux/tmux.png alt="Screenshot of iTerm2 showing my tmux session with cowsay" %}
 
 I hope something here has been of use to you, and that you can find tmux a
 useful tool. Happy tmuxing!
