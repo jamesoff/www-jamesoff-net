@@ -65,6 +65,12 @@ module Jekyll
         { :src => markup[:image_src] }
       end
 
+      instance[:filter] = if preset && preset['filter']
+                            preset['filter']
+                          else
+                            nil
+                          end
+
       # Process html attributes
       html_attr = if markup[:html_attr]
         Hash[ *markup[:html_attr].scan(/(?<attr>[^\s="]+)(?:="(?<value>[^"]+)")?\s?/).flatten ]
@@ -158,10 +164,11 @@ module Jekyll
 
         # Scale and crop
         image.combine_options do |i|
+          i.filter instance[:filter] unless instance[:filter].nil?
           i.resize "#{gen_width}x#{gen_height}^"
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
-          i.layers "Optimize"
+          # i.layers "Optimize"
         end
 
         image.write gen_dest_file
