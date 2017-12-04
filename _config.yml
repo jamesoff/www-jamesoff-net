@@ -86,6 +86,7 @@ image:
   presets:
     half:
       width: 420
+      filter: Box
     big:
       width: 840
       filter: Box
