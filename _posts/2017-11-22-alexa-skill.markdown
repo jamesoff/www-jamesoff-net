@@ -208,7 +208,7 @@ We need to create the table in DynamoDB ready to store the data.
 * Set the Primary Key to `userid`, with type `String`.
 * Turn off **Use default settings**, then turn off the "Auto Scaling" checkboxes for **Read capacity** and **Write capacity**. Set the **Read capacity units** and **Write capacity units** both to 1.
 
-{% image big alexa-cracker/dynamodb-console1.png %}
+{% image big alexa-cracker/dynamodb-console1.png alt="Screenshot of DynamoDB console" %}
 
 Note that while it gives an estimated cost for the table, as long as your total DynamoDB unit usage is inside the [free tier](https://aws.amazon.com/dynamodb/pricing/#free-tier<Paste>), you won't be charged.
 
@@ -291,7 +291,7 @@ Now we need to upload our code to Lambda so that it can executed by Alexa.
 * Name the function something like `alexa-cracker`.
 * Select **Python 3.6** for the runtime. For the Role, select **Create a custom role**, which will open a new window. In this window, select **Create a new IAM Role**, and enter a name like `alexa_cracker_role`.
 
-{% image half alexa-cracker/iam-role.png %}
+{% image half alexa-cracker/iam-role.png alt="Screenshot of creating IAM role" %}
 
 * Click **Allow**, which should return you to the Lambda setup with the new role name filled in. If it's not filled in, select it from the **Existing role** dropdown.
 * Click **Create Function**, and you should end up at the function Configuration page, which shows among other things the function code. We can't just paste in the Python here, as we're using the ask-alexa-pybot library. Instead, we'll need to upload a Zip file of the code and library.
@@ -305,7 +305,7 @@ Now we need to upload our code to Lambda so that it can executed by Alexa.
 * Change the **Runtime** to Python (to match your targeted version) if needed, then click the **Save** button (at the top of the page).
 * When the page reloads, your code should be visible in the editor.
 
-{% image big alexa-cracker/lambda-console-1.png %}
+{% image big alexa-cracker/lambda-console-1.png alt="Screenshot of code uploaded to Lambda" %}
 
 ## Configuring Lambda
 
@@ -317,7 +317,7 @@ We need to adjust the Lambda execution role so that it's allowed to use the Dyna
 * In the search box top left, put in the name of the role name you gave while creating the function, and select it from the list of results (it'll be the one with the blue wand icon).
 * You should see the Permissions tab, which should give specify one policy called something like `oneClick_lambda_basic_execution_...`. Click the arrow next to the policy to expand it, then click **Edit Policy**.
 
-{% image big alexa-cracker/iam-console-1.png %}
+{% image big alexa-cracker/iam-console-1.png alt="Screenshot of updating IAM role for DynamoDB access" %}
 
 * In the editor which opens, make the policy look like this, but substitute the ARN of your DynamoDB table:
 
@@ -355,7 +355,7 @@ We also need to make Lambda aware that Alexa is going to trigger this function.
 
 * On the Lambda function page, in the **Add Triggers** section near the top, click **Alexa Skills Kit** to add it.
 
-{% image big alexa-cracker/lambda-console-2.png %}
+{% image big alexa-cracker/lambda-console-2.png alt="Screenshot of adding Alexa trigger to Lambda" %}
 
 * Click **Add** on the section below, then **Save** top right.
 
@@ -367,7 +367,7 @@ In the code, we told Python to find the name of the DynamoDB table to connect to
 * Scroll down in the Lambda console and find the **Environment Variables** section.
 * Enter a key of `BMOTION_TABLE` with a value of the name (not the ARN) of your DynamoDB table.
 
-{% image big alexa-cracker/lambda-console-3.png %}
+{% image big alexa-cracker/lambda-console-3.png alt="Screenshot of configuring environment variables for Lambda" %}
 
 * Click the **Save** button at the top.
 
