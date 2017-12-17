@@ -276,9 +276,9 @@ def pull_cracker_handler(request):
 
 This function builds the output for Alexa a bit at a time. The first bit picks a sound effect for the cracker. It uses [SSML](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions), which lets us control how Alexa speaks the text a bit more. The sound of the cracker is marked up as an interjection.
 
-Next we add a short pause, which Alexa locates the bits of cracker and prize which fell on the floor.
+Next we add a short pause, while Alexa locates the bits of cracker and prize which fell on the floor.
 
-We pick a winner at random, and then tell the user they won or that we did, and the prize. The hat count is incremented using the code we wrote earlier, and we add output telling the user the new number of hats.
+We pick a winner at random, and then tell the user they won or that we did, and what the prize was. The hat count is incremented using the code we wrote earlier, and we add output telling the user the new number of hats.
 
 Finally we need to wrap the whole output in `<ssml>` tags, and then we return it to Alexa.
 
