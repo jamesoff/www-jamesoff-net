@@ -239,7 +239,7 @@ def count_hats_handler(request):
 
 First, we call our `get_hats()` function to read the number of hats this user has from DynamoDB. Then we just select the right output based on that number, and finally send the output back to Alexa. For this response, we're setting `end_session` to `True`, which tells Alexa we're done with this interaction. The practical result of this is that on the user's device, the light ring goes out and Alexa stops listening for more utterances.
 
-If we didn't set this, the light would stay on, and Alexa would be waiting for more input (to our skill). This more more for when you need to ask the user for more information to clarify something (e.g. "Alexa, set a timer" "For how many minutes?"). Session management is beyond the scope of this guide.
+If we didn't set this, the light would stay on, and Alexa would be waiting for more input (to our skill). This more for when you need to ask the user for more information to clarify something (e.g. "Alexa, set a timer" "For how many minutes?"). Session management is beyond the scope of this guide.
 
 ### Pulling a cracker
 
