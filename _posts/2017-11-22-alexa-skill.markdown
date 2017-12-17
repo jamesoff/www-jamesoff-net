@@ -274,7 +274,7 @@ def pull_cracker_handler(request):
     )
 {% endhighlight %}
 
-This function builds the output for Alexa a bit at a time. The first bit picks a sound effect for the cracker. It uses [SSML](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions), which lets us control how Alexa speaks the text a bit more. The sound of the cracker is marked up as in interjection.
+This function builds the output for Alexa a bit at a time. The first bit picks a sound effect for the cracker. It uses [SSML](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions), which lets us control how Alexa speaks the text a bit more. The sound of the cracker is marked up as an interjection.
 
 Next we add a short pause, which Alexa locates the bits of cracker and prize which fell on the floor.
 
