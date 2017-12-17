@@ -8,6 +8,8 @@ Creating a skill for Alexa is reasonably straightforward once you get your head 
 
 This walkthrough won't cover the complete code used in my skill (because a lot of it isn't Alexa-specific), but will show you how to fit all the moving parts together to make your own skill.
 
+There's also other ways to do and manage some of the steps here, like serverless frameworks and AWS tools. I'm omitting those here to keep things as simple as possible.
+
 ## What we're creating
 
 [bMotion](https://github.com/jamesoff/bmotion) is my eggdrop script for Artificial Stupidity, and a popular plugin for it is one which allows users to pull a Christmas cracker with the bot. Doing so results in either you or the bot winning the prize from the cracker, which is picked from a list of random objects the bot knows. It also tracks how many hats each user and the bot has (i.e. how many times each has won). Out of scope for this implementation is the way that bMotion tracks items it likes and dislikes, and the cracker logic responds differently to the objects "in" the cracker and who wins.
@@ -66,9 +68,9 @@ AlexaHats how many hats do you have on
 AlexaHats how many hats have you won
 ```
 
-You can see that the training data gives the name of the intent, followed by an example utterance which should trigger it. (The names of the intents are something you decide.)
+You can see that the training data gives the name of the intent, followed by an example utterance which should trigger it. (The names of the intents are something you decide.) The utterances here will be generally be prefixed with "Alexa, ask bMotion ..." but you don't specify that bit.
 
-Here's the intent JSON for the cracker skill, which omits the standard Amazon intents for cancelling etc:
+Here's the intent JSON for the cracker skill, which omits the standard Amazon intents for cancelling etc.
 
 {% highlight json %}
 {
@@ -101,7 +103,7 @@ First, in a new project directory, we pull in ask-alexa-pykit.
 % pip install ask-alexa-pykit --target alexa-cracker
 ```
 
-The ask-alexa-pykit README describes how to use it to create intents and utterance training data, although we're not going to use that. The intent data (minus the standard cancel, stop, and help intents) is shown above, as are the utterances. We don't need to supply these files with the function code, but I keep them in the repo anyway as a reference. We'll copy/paste them into the skill configuration page later.
+The ask-alexa-pykit README describes how to use it to create intents and utterance training data, although we're not going to use that. The intent data (minus the standard cancel, stop, and help intents) is shown above, as are the utterances. We don't need to supply these files with the function code, but I keep them in the repository anyway as a reference. We'll copy/paste them into the skill configuration page later.
 
 Now we create the code Lambda will load and run, which will be in lambda_function.py (although it can be called anything).
 
@@ -151,12 +153,14 @@ We'll look at the content for the other request handlers shortly.
 
 ### Counting hats
 
-We're going to use DynamoDB to store hat counts, so let's create the client/table objects. By creating these outside of the handler functions, they [persist for the lifetime of the Lambda container](https://aws.amazon.com/blogs/compute/container-reuse-in-lambda/), saving the overhead of recreating them every time the handler is called. The name of the table we use will come from an environment variable, so that it can be changed in the Lambda function configuration.
+We're going to use DynamoDB to store hat counts, so let's create the client/table objects. By creating these outside of the handler functions, they [persist for the lifetime of the Lambda container](https://aws.amazon.com/blogs/compute/container-reuse-in-lambda/), saving the overhead of recreating them every time the handler is called. The name of the table we use will come from an environment variable, so that it can be changed in the Lambda function configuration. This code goes at the end of the file:
 
 {% highlight python %}
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table(os.environ['BMOTION_TABLE'])
 {% endhighlight %}
+
+And at the top, add `import os`.
 
 Let's write the functions to get and increment the number of hats for a user.
 
@@ -201,7 +205,7 @@ We need to create the table in DynamoDB ready to store the data.
 * Sign in to the AWS Console, and go to [DynamoDB](https://console.aws.amazon.com/dynamodb/home?region=us-east-1#).
 * Click **Create Table**. In the table name, enter `bmotion`.
 * Set the Primary Key to `userid`, with type `String`.
-* Turn off **Use default settings**, then turn off the checkboxes for **Read capacity** and **Write capacity**. Set the **Read capacity units** and **Write capacity units** both to 1.
+* Turn off **Use default settings**, then turn off the "Auto Scaling" checkboxes for **Read capacity** and **Write capacity**. Set the **Read capacity units** and **Write capacity units** both to 1.
 
 {% image big alexa-cracker/dynamodb-console1.png %}
 
@@ -209,7 +213,7 @@ Note that while it gives an estimated cost for the table, as long as your total 
 
 * Click **Create**.
 
-Table creation will take a minute or so. In the meanwhile, make a note of the ARN, which we will need for granting the Lambda function access to the table later. It'll look like `arn:aws:dynamodb:us-east-1:1234567890:table/bmotion`.
+Table creation will take a minute or so. In the meanwhile, make a note of the ARN, which we will need for granting the Lambda function access to the table later. It'll look like `arn:aws:dynamodb:us-east-1:1234567890:table/bmotion` and you can find it at the bottom of the **Table Details** section.
 
 ### Handling a request
 
@@ -228,7 +232,7 @@ def count_hats_handler(request):
     elif hats == 1:
         retval = 'You have one hat.'
     else:
-		retval = 'You are wearing {} hats'.format(hats)
+        retval = 'You are wearing {} hats'.format(hats)
     return alexa.create_response(retval, end_session=True)
 {% endhighlight %}
 
@@ -241,6 +245,10 @@ If we didn't set this, the light would stay on, and Alexa would be waiting for m
 Here's an example function for pulling a cracker, which goes through the steps outlined above. Again, my actual code is more involved mostly to give greater variety of content.
 
 {% highlight python %}
+# add this line to the top of the file
+import random
+
+
 @alexa.intent_handler('PullCracker')
 def pull_cracker_handler(request):
     prizes = ['mood fish', 'plastic frog', 'magnifying glass']
@@ -254,7 +262,7 @@ def pull_cracker_handler(request):
             retval = retval + " You're now wearing {} hats.".format(hats)
     else:
         retval = retval + 'I won, and I got a {}'.format(random.choice(prizes))
-        increment_hats(request.user_id() + ':alexa')
+        hats = increment_hats(request.user_id() + ':alexa')
         if hats > 1:
             retval = retval + " I'm now wearing {} hats.".format(hats)
     retval = '<speak>{}</speak>'.format(retval)
@@ -265,26 +273,26 @@ def pull_cracker_handler(request):
     )
 {% endhighlight %}
 
-This function builds the output for Alexa a bit at a time. The first bit picks a sound effect for the cracker. It uses SSML, which lets us control how Alexa speaks the text a bit more. The sound of the cracker is marked up as in interjection.
+This function builds the output for Alexa a bit at a time. The first bit picks a sound effect for the cracker. It uses [SSML](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions), which lets us control how Alexa speaks the text a bit more. The sound of the cracker is marked up as in interjection.
 
 Next we add a short pause, which Alexa locates the bits of cracker and prize which fell on the floor.
 
 We pick a winner at random, and then tell the user they won or that we did, and the prize. The hat count is incremented using the code we wrote earlier, and we add output telling the user the new number of hats.
 
-Finally we need to wrap the whole output in [`<ssml>` tags](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html), and then we return it to Alexa.
+Finally we need to wrap the whole output in `<ssml>` tags, and then we return it to Alexa.
 
 ## Uploading to Lambda
 
 Now we need to upload our code to Lambda so that it can executed by Alexa.
 
-* Sign in to the AWS Console and head over to Lambda.
+* Sign in to the AWS Console and head over to [Lambda](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions).
 * Click the **Create Function** button, then **Author from scratch**.
 * Name the function something like `alexa-cracker`.
 * Select **Python 3.6** for the runtime. For the Role, select **Create a custom role**, which will open a new window. In this window, select **Create a new IAM Role**, and enter a name like `alexa_cracker_role`.
 
 {% image half alexa-cracker/iam-role.png %}
 
-* Click **Allow**, which should return you to the Lambda setup with the new role name filled in.
+* Click **Allow**, which should return you to the Lambda setup with the new role name filled in. If it's not filled in, select it from the **Existing role** dropdown.
 * Click **Create Function**, and you should end up at the function Configuration page, which shows among other things the function code. We can't just paste in the Python here, as we're using the ask-alexa-pybot library. Instead, we'll need to upload a Zip file of the code and library.
 * In your terminal, in the `alexa-cracker` directory, create a zip file:
 
@@ -292,8 +300,8 @@ Now we need to upload our code to Lambda so that it can executed by Alexa.
 % zip -r ask-lambda.zip *
 ```
 
-* In the console, from the **Code entry type** dropdown choose "Upload a .ZIP file", then click the **Upload** button and choose the Zip file just created.
-* Change the **Runtime** to Python (to match your targeted version), then click the **Save** button (at the top of the page).
+* In the Lambda console, from the **Code entry type** dropdown (you may need to scroll down) choose "Upload a .ZIP file", then click the **Upload** button and choose the Zip file just created.
+* Change the **Runtime** to Python (to match your targeted version) if needed, then click the **Save** button (at the top of the page).
 * When the page reloads, your code should be visible in the editor.
 
 {% image big alexa-cracker/lambda-console-1.png %}
@@ -348,16 +356,33 @@ We also need to make Lambda aware that Alexa is going to trigger this function.
 
 {% image big alexa-cracker/lambda-console-2.png %}
 
+* Click **Add** on the section below, then **Save** top right.
+
 ### Environment variables
 
 In the code, we told Python to find the name of the DynamoDB table to connect to in the environment. We need to tell Lambda to populate this value for us.
 
+* You may need to click the widget near the top with the Lambda icon and your function name in it, so that the **Function Code** section shows up.
 * Scroll down in the Lambda console and find the **Environment Variables** section.
 * Enter a key of `BMOTION_TABLE` with a value of the name (not the ARN) of your DynamoDB table.
 
 {% image big alexa-cracker/lambda-console-3.png %}
 
 * Click the **Save** button at the top.
+
+### Testing the function
+
+We can test our function to make sure it executes correctly.
+
+* At the top of the Lambda console, open the dropdown next to the **Test** button and choose **Configure test events**
+* Select **Create new test event**, select **Alexa - GetNewFact**. This is a sample event which has an intent with no slots, so it's a good match for our code.
+* Give the event a name, like `alexatest`
+* In the editor below, find the line reading `"name": "GetNewFactIntent"`, around line 20, and change it to `"name": "PullCracker"`
+* Save the test event
+* Make sure you event name is selected in the drop down now, then click **Test**
+* Hopefully you'll get a green box with the output of your function, and you'll be able to see the SSML which Alexa would read out. If you run the test a couple of times you should see your (or Alexa's) hat count show up appropriately too.
+
+If you get a cross red box then you will need to examine the error message to determine what's wrong.
 
 ## Configuring the Skill
 
@@ -372,6 +397,8 @@ On the Configuration page, select AWS Lambda as the Endpoint, and paste in the A
 You should now be on the Test page, which means if the switch at the top of the page is set to **Enabled** that your skill should be enabled on your account and you can access it from your Echos.
 
 > Alexa, ask bmotion to pull a cracker
+
+You can also type `pull a cracker` into the utterance box in the Service Simulator section, and click the Ask button to see the output from your function.
 
 ## What next?
 
