@@ -2,6 +2,7 @@
 layout: post
 title: Creating a simple Alexa skill
 summary: How I created the bMotion cracker-pulling skill for Alexa
+original: /alexa-howto
 ---
 
 Creating a skill for Alexa is reasonably straightforward once you get your head around the main concepts. My [cracker-pulling skill](https://www.amazon.co.uk/gp/product/B077LX6244) is simpler than most as it does not have any kind of conversational flow - it always answers your query and that's the end of the interaction. There's no way to pose an incomplete query to the skill so that it has to prompt for more information. This probably makes it a good skill to look at to start with as it omits some complexity.
