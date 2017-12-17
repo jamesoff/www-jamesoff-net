@@ -407,3 +407,6 @@ Getting the skill certified. You'll need to make sure you're handling all the "s
 
 My first submission of this skill was rejected because I needed to spell out the skill name as `b. Motion` not `bMotion`, but the rejection email told me exactly this, and where in the configuration it needed to be changed. After fixing these issues it was approved. Each review took around 12 hours. Then you can publish your skill to the world and watch the dashboard to see how it's being used. Don't forget your hat!
 
+## Code Repo
+
+You can find the code used in this article at [{% icon fa-github %}alexa-cracker-sample](https://github.com/jamesoff/alexa-cracker-sample).
