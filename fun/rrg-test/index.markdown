@@ -34,5 +34,5 @@ Insufficiently delicious? <input id="refresh" type="button" value="Refresh!" onc
 Insufficiently insane? <input id="refreshinsane" type="button" value="Refresh insane mode!" onclick="fetchInsane();" /> <kbd>I</kbd>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="/js/rrg.js"></script>
+<script type="text/javascript" src="/js/rrg-test.js"></script>
 
