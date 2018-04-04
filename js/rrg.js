@@ -6,7 +6,7 @@ function fetchInsane() {
 
 
 function fetchRecipe(insane=false) {
-    var api_url = "https://api.jamesoff.net/recipe";
+    var api_url = "https://rrg.jamesoff.net/recipe";
     if (insane) {
         api_url += '-insane'
     }
@@ -90,7 +90,7 @@ function shareRecipe() {
     if (recipe_id == '') {
         return false;
     }
-    $.getJSON("https://api.jamesoff.net/recipe-persist/" + recipe_id, function(data) {
+    $.getJSON("https://rrg.jamesoff.net/recipe-persist/" + recipe_id, function(data) {
         giveShareLink();
     } )
         .fail(function() {
