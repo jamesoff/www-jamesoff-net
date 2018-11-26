@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yum install -y imagemagick
+        - yum install -y ImageMagick
         - bundle install
     build:
       commands:
