@@ -55,7 +55,7 @@
 
 
     function fetchFails() {
-        var api_url = "https://api.jamesoff.net/fails/";
+        var api_url = "https://en51bysddi.execute-api.eu-west-1.amazonaws.com/prod/fails";
         $.getJSON(api_url, function(data) {
         	update(data);
 		}
