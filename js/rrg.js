@@ -17,6 +17,7 @@ function fetchRecipe(insane=false) {
         $("div#share").replaceWith(
             "<div id='share'><input id='share' type='button' value='Get share link' onclick='shareRecipe()' /></div>"
         );
+        $("div#yum").replaceWith("<div id='yum'>Yum.</div>");
         recipe_id = data.metadata.recipe_id;
         location.hash = '';
     } )
