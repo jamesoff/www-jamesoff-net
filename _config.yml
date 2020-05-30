@@ -90,3 +90,5 @@ image:
     big:
       width: 840
       filter: Box
+plugins:
+  - jekyll-paginate
