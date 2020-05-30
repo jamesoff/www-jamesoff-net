@@ -3,7 +3,7 @@ layout: post
 title: Controlling LaMetric TIME over HTTP
 summary: Adding a missing feature to LaMetric TIME
 ---
-[LaMetric TIME](https://lametric.com/en-US/time/overview) is a connected clock which uses a dot-matrix style display. I use it as my alarm clock, as one of its features is that it uses [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) to set itself. My old alarm clock used the [Time from NPL](https://en.wikipedia.org/wiki/Time_from_NPL_(MSF)) (née Rugby Clock) radio signal and had trouble reliably receving it. Also, I couldn't talk HTTP to it.
+[LaMetric TIME](https://lametric.com/en-US/time/overview) is a connected clock which uses a dot-matrix style display. I use it as my alarm clock, as one of its features is that it uses [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) to set itself. My old alarm clock used the [Time from NPL](https://en.wikipedia.org/wiki/Time_from_NPL_(MSF)) (neé Rugby Clock) radio signal and had trouble reliably receiving it. Also, I couldn't talk HTTP to it.
 
 One of the other features of the TIME is that you can add other apps to it (and indeed [write your own](https://github.com/jamesoff/lametric-darksky)). You then scroll through the apps using buttons on the device, or the iPhone app. You can also configure it to rotate automatically between them, and switch to certain ones at a particular time of day. This last feature seemed like something I wanted, so that it could show me the time when I wake up, the forecast during the day, the time again when I would be going to bed, and finally blank around the time I'd actually go to sleep (I like a dark room).
 
