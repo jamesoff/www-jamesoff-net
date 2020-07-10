@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Counting IPv4 vs IPv6 packets
-summary: Handy to see what balance of traffic you have
+title: Counting IPv4 vs IPv6 packets on a Unifi Security Gateway
+summary: Handy to see what balance of traffic you have, and should also apply to other Linux routers.
 ---
 
-Recently (after looking at the query type stats on my PiHole) I wondered how much IPv4 vs IPv6 traffic my home network was driving.
+Recently (after looking at the query type stats on my [PiHole](https://pi-hole.net/) I wondered how much IPv4 vs IPv6 traffic my home network was driving.
 
-I use a UniFi Security Gateway as my router, and presumably because IPv6 support is in beta for UniFi, the management UI doesn't give any breakdown on traffic types by family.
+I use a [UniFi Security Gateway](https://www.ui.com/unifi-routing/usg/) as my router, and presumably because it's early days for IPv6 support in UniFi, the management UI doesn't give any breakdown on traffic types by family.
 
 You can get this info out of `netstat` though, so after sshing to the USG, the following commands will give you the traffic in packets handled by IPv4 and IPv6 (no need to be root):
 
