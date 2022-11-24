@@ -8,9 +8,9 @@ frontend:
     build:
       commands:
         - bundle exec jekyll b
-    postBuild:
-      commands:
-        - bundle exec htmlproofer ./_site --disable-external
+#    postBuild:
+#      commands:
+#        - bundle exec htmlproofer ./_site --disable-external
   artifacts:
     baseDirectory: _site
     files:

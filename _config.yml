@@ -92,3 +92,5 @@ image:
       filter: Box
 plugins:
   - jekyll-paginate
+keep_files:
+  - .well-known/webfinger
