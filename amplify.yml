@@ -8,6 +8,7 @@ frontend:
     build:
       commands:
         - bundle exec jekyll b
+        - ls -l _site/.well-known
 #    postBuild:
 #      commands:
 #        - bundle exec htmlproofer ./_site --disable-external
@@ -15,6 +16,6 @@ frontend:
     baseDirectory: _site
     files:
       - '**/*'
-      - '.well-known/*'
+      - '.well-known/webfinger'
   cache:
     paths: []
