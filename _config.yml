@@ -66,7 +66,7 @@ exclude:
     - Gemfile.lock
 include:
     - _htaccess
-    - .well-known
+    - well-known
 sitemap:
     exclude:
         - /googleff360c83a8c3e0c4.html
