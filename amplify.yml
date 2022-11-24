@@ -15,5 +15,6 @@ frontend:
     baseDirectory: _site
     files:
       - '**/*'
+      - '.well-known/*'
   cache:
     paths: []
