@@ -1,8 +1,8 @@
 {
   "subject": "acct:jamesoff@mastodon.jamesoff.net",
   "aliases": [
-    "https://#{mastodon.jamesoff.net}/@jamesoff",
-    "https://#{mastodon.jamesoff.net}/users/jamesoff"
+    "https://mastodon.jamesoff.net/@jamesoff",
+    "https://mastodon.jamesoff.net/users/jamesoff"
   ],
   "links": [
     {
