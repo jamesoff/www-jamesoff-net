@@ -3,7 +3,7 @@ ruby '3.0.4'
 source "https://rubygems.org"
 
 gem "pkg-config"
-gem "activesupport", "~> 6.1"
+gem "activesupport", "~> 7.0"
 gem "jekyll"
 gem "jekyll-paginate"
 gem "html-proofer"
