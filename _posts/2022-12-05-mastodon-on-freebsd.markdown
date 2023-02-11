@@ -4,6 +4,8 @@ title: Mastodon on FreeBSD
 summary: Setting up Mastodon on FreeBSD
 ---
 
+Mastodon is now available in ports, so you can just `pkg install` it if you want. I went through this process while the version in ports was abandoned, but it was adopted again not long after. I'm keeping with my install though, and publishing my notes in case they're of use to anyone else doing similar.
+
 Here's the steps I used to install Mastodon 4.0.2 on FreeBSD.
 
 I started from Colin Percival's FreeBSD 13.0-RELEASE EC2 image, and first updated it to 13.1-RELEASE.
@@ -14,7 +16,7 @@ Starting logged in as root:
 freebsd-update -r 13.1-RELEASE upgrade
 freebsd-update install
 
-# reboot
+# reboot as requested by freebsd-update
 
 freebsd-update install
 ```
@@ -95,7 +97,7 @@ And return to your root shell:
 exit
 ```
 
-[TODO: tune pgsql]
+[TODO: tune pgsql?]
 
 Create the mastodon database:
 
@@ -377,4 +379,103 @@ svstat /var/service/*
 ```
 
 Your Mastdon install should now be functional.
+
+## Updating
+
+To update Mastodon, follow these steps.
+
+Create a backup using whatever method is suitable for your environment. I shut down the host and snapshot the disk, then start it up again.
+
+Consult the release notes for the release of Mastodon you're updating to. If you're upgrading from more than one release ago, consult the release notes for the intervening versions too as they can have their own requirements.
+
+Verify you have the right versions of the external dependencies installed.
+
+```shell
+su - mastodon
+cd live
+ruby --version
+postgres --version
+# I'm not using Elasticsearch
+redis-server --version
+node --version
+```
+
+Fetch and check out the version of the code you're upgrading to (per the release notes)
+
+```shell
+git fetch && git checkout v4.1.0
+```
+
+Follow the non-Docker and the "both" instructions from the release notes.
+
+If instructed to restart all the Mastodon services, you do it with `svc`:
+
+```shell
+svc -d /var/service/mastodon-*
+
+# check they're stopped
+svstat !$
+
+svc -u !$
+
+# wait a few seconds for things to (hopefully) stay running and check
+svstat !$
+```
+
+If any of the services have an uptime of 0 to a couple of seconds, they're likely crashing and restarting. Check the right log file in `/var/log/mastodon-SERVICE/current` for clues.
+
+When you're happy, remember to delete your backup/snapshot, especially if you pay for storing it (assuming that you have some other regular backup mechanism set up anyway! and if you don't, do that).
+
+## Troubleshooting
+
+I found during my preflight checks ("is it working ok before I mess with it?") before upgrading that Sidekiq wouldn't (re)start because it was using a Gem built against a version of a library which had changed, so I had to rebuild that particular Gem to make it work. For reference, here's how I figured that out and fixed it.
+
+First, looking in the Sidekiq log:
+
+```shell
+less /var/log/mastodon-sidekiq/current
+```
+
+and jumping to the end of the file (by pressing `G`) showed this error repeating every time the service tried to start:
+
+```
+bundler: failed to load command: sidekiq (/usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/bin/sidekiq)
+/usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require': Shared object "libicudata.so.71" no
+t found, required by "charlock_holmes.so" - /usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/gems/charlock_holmes-0.7.7/lib/charlock_holmes/charlock_holmes.so (LoadError)
+        from /usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+        from /usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/gems/activesupport-6.1.7/lib/active_support/dependencies.rb:332:in `block in require'
+        from /usr/home/mastodon/live/vendor/bundle/ruby/3.0.0/gems/activesupport-6.1.7/lib/active_support/dependencies.rb:299:in `load_dependency'
+[snip]
+```
+
+The two key bits of information in this log are that it's a shared object (library, `.so` file) called `libicudata.so.71` which can't be found, and that it's the `charlock_holmes` gem trying to load it.
+
+First I tried finding that file to see if it was present but not being loaded:
+
+```shell
+locate libicudata.so.71
+```
+
+which returned no output, so that file doesn't exist now. The numbers at the end are a version, so I repeated the search without the version to see what was around:
+
+```shell
+locate libicudata.so
+```
+
+This gave me
+
+```
+/usr/local/lib/libicudata.so
+/usr/local/lib/libicudata.so.72
+/usr/local/lib/libicudata.so.72.1
+```
+
+So the library got updated (by `pkg`), which means (because it worked before with the other version) we probably just need to get the gem rebuilt so it links to the new version instead.
+
+```shell
+# in the ~mastodon/live directory
+bundle pristine charlock_holmes
+```
+
+After this, sidekiq started straight up.
 
