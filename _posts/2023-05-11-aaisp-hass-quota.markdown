@@ -17,7 +17,7 @@ My previous ISP didn't impose a quota (or may have done a "fair-use"
 arrangement, which I never found the edges of). A&A offer two quota levels, 1TB
 a month or 10TB a month. 1TB seemed about right (based on eyeballing the stats
 on my router), and while 10TB was only £10/month extra, it didn't seem like I
-needed to pay the extra expense for that - especially while cover house-moving
+needed to pay the extra expense for that - especially while covering house-moving
 costs. I wasn't worried about locking myself in to something as 50% of your
 unused quota rolls over to the next month, you can top-up as you go, and
 finally you can change quota for no (admin) charge.
