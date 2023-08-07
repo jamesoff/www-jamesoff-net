@@ -55,7 +55,7 @@ permalink:    /:year/:month/:day/:title.html
 paginate:     4
 sass:
   compressed: true
-  style: compresed
+  style: compressed
 gems:
   - jekyll-paginate
   - jekyll-gist
@@ -78,6 +78,7 @@ sitemap:
         - /css/pixyll.scss
         - /nginx-rewrites
         - /BingSiteAuth.xml
+        - /robots.txt
     include_posts:
         - /index.html
 highlighter: rouge
