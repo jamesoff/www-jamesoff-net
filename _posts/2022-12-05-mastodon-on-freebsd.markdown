@@ -479,3 +479,23 @@ bundle pristine charlock_holmes
 
 After this, sidekiq started straight up.
 
+## FreeBSD 14.0 notes
+
+Upgrading to FreeBSD 14.0 was pretty straightforward. Ruby needed rebuilding to work (as you would expect). 3.0.4 wouldn't build so I moved to 3.2.2:
+
+```
+rbenv install 3.2.2
+rbenv global 3.2.2
+```
+
+(This needed rbenv and rbenv-build to be updated, by `git pull`ing in each of their directories as above.)
+
+I also needed to add some build options for `bundle install` to succeed:
+
+```
+bundle config build.cbor --with-cflags="-Wno-incompatible-function-pointer-types"
+bundle config build.posix-spawn --with-cflags="-Wno-incompatible-function-pointer-types"
+```
+
+With these updates, everything started right back up.
+
