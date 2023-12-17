@@ -4,7 +4,11 @@ title: Mastodon on FreeBSD
 summary: Setting up Mastodon on FreeBSD
 ---
 
-Mastodon is now available in ports, so you can just `pkg install` it if you want. I went through this process while the version in ports was abandoned, but it was adopted again not long after. I'm keeping with my install though, and publishing my notes in case they're of use to anyone else doing similar.
+Updated 2023-12-17 to add FreeBSD 14.0 notes at end.
+
+Updated 2023-02-11: Mastodon is now available in ports, so you can just `pkg install` it if you want. I went through this process while the version in ports was abandoned, but it was adopted again not long after. I'm keeping with my install though, and publishing my notes in case they're of use to anyone else doing similar.
+
+<hr />
 
 Here's the steps I used to install Mastodon 4.0.2 on FreeBSD.
 
