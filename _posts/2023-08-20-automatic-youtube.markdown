@@ -108,7 +108,10 @@ else
     jq_bit='.posts[]'
 fi
 
-videos=$( $HOME/.local/bin/pinboard "$command" | jq -r "$jq_bit"' | select(.href | contains("youtube.com")) | .href' )
+videos=$(
+        $HOME/.local/bin/pinboard "$command" | \
+                jq -r "$jq_bit"' | select(.href | contains("youtube.com") or contains("youtu.be")) | select(.toread == "yes").href'
+        )
 for video in $videos; do
     download_one 1080 "$video"
 done
