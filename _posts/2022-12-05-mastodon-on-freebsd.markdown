@@ -503,3 +503,58 @@ bundle config build.posix-spawn --with-cflags="-Wno-incompatible-function-pointe
 
 With these updates, everything started right back up.
 
+## Mastodon 4.3 notes
+
+### Versions
+
+Yarn needs updating. Everything else seems like it should be an acceptable version (spoiler: Ruby gets updated below).
+
+There doesn't seem to be a suitable version in `pkg` nor in ports (`make search name=yarn | grep Port`). Poking around the docs reveals https://yarnpkg.com/migration/guide. Running `corepack enable` will result in a clash with installed yarn1, so remove that first. Additionally, I point it at a location in my non-privileged user's `$PATH`.
+
+```
+# pkg remove yarn-node20-1.22.19
+
+$ corepack enable --install-dir /data/mastodon/bin
+
+$ yarn set version berry
+! Corepack is about to download https://repo.yarnpkg.com/4.5.0/packages/yarnpkg-cli/bin/yarn.js
+? Do you want to continue? [Y/n] y
+
+➤ YN0000: Done in 0s 20ms
+
+$ yarn --version
+4.5.0
+```
+
+We also want to move to libvips. Installing that needed removing a conflicting ImageMagick7 first.
+
+```
+# pkg install vips
+```
+
+## Changes
+
+Generate new Active Record secrets and make available to the processes by adding them to files in `/var/service/mastodon-*/env`. I copied them between each service (rather than trying to symlink them). Generate keys with `bin/rails db:encryption:init`. They also need to go in your `.env.production` file.
+
+Generate keys with `bin/rails db:encryption:init`.
+
+Also put `true` in `MASTODON_USE_LIBVIPS` in each service's `env` dir.
+
+Check out the new version from git.
+
+Update Ruby, as this brings a new `.ruby-version` file.
+
+```
+git -C /data/mastodon/.rbenv/plugins/ruby-build pull
+
+RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install
+
+corepack prepare
+
+bundle install
+
+yarn install --immutable
+
+bundle exec rails assets:precompile
+```
+
