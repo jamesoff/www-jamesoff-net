@@ -82,7 +82,7 @@ source $HOME/.local/bin/download-util.sh
 
 download 1080 "https://www.youtube.com/@AMMO-NYC/videos"
 
-# Dashcams AU monthly compiliations playlist
+# Dashcams AU monthly compilations playlist
 download 1080 "https://www.youtube.com/playlist?list=PLlFN1tsXeNsymgnTb9jTv87YO7wEG02ck"
 
 download 720 "https://www.youtube.com/@aboveandbeyond/streams"
@@ -116,4 +116,76 @@ for video in $videos; do
     download_one 1080 "$video"
 done
 ```
+## Wallabag
 
+Update 2024-11-17: I moved (previously) from Pinboard to a locally-hosted Wallabag; here's the script set up for downloading youtube videos saved to there instead. This version also marks downloaded videos as "read" (aka archived), which tidies up the view when I'm looking at my saved links, and also means they can be filtered out for future scans by the script.
+
+Note that the API browser for Wallabag seems to be incorrect, at least for the generated `curl` command for updating an entry. In the end I figured out the incantation by examining the code in the Firefox extension.
+
+```bash
+#!/usr/bin/env bash
+
+source "$HOME/.local/bin/download-util.sh"
+
+source "$HOME/.local/bin/wallabag-credentials.sh"
+
+token=$(
+	curl --silent -X POST \
+		https://wallabag.domain.com/oauth/v2/token \
+		-d grant_type=password \
+		-d client_id="$WALLABAG_ID" \
+		-d client_secret="$WALLABAG_SECRET" \
+		-d username="$WALLABAG_USERNAME" \
+		-d password="$WALLABAG_PASSWORD" | jq -r .access_token
+)
+
+download_wallabags() {
+	for video in "$@"; do
+		echo "==> $video"
+		url=$(
+			/usr/local/bin/curl --silent \
+				-X GET \
+				-H 'accept: */*' \
+				-H "Authorization: Bearer $token" \
+				"https://wallabag.domain.com/api/entries/$video" | jq -r ".given_url"
+		)
+		echo "    $url"
+		if download_one 1080 "$url"; then
+			echo "--> Marking as archived"
+			/usr/local/bin/curl --silent \
+				-X PATCH \
+				-H "Authorization: Bearer $token" \
+				-H "Accept: application/json" \
+				-H "Content-Type: application/json" \
+				--data '{"archive": 1}' \
+				"https://wallabag.domain.com/api/entries/${video}" >/dev/null
+		else
+			echo "--> Download failed"
+		fi
+		echo
+	done
+
+}
+
+videos=($(
+	/usr/local/bin/curl -q --silent \
+		-X 'GET' \
+		'https://wallabag.domain.com/api/entries?sort=created&order=desc&page=1&perPage=30&since=0&detail=metadata&domain_name=www.youtube.com' \
+		-H 'accept: */*' \
+		-H "Authorization: Bearer $token" | jq -r '._embedded.items[] | select(.is_archived == 0) | .id'
+))
+download_wallabags "${videos[@]}"
+
+videos=($(
+	/usr/local/bin/curl -q --silent \
+		-X 'GET' \
+		'https://wallabag.domain.com/api/entries?sort=created&order=desc&page=1&perPage=30&since=0&detail=metadata&domain_name=youtu.be' \
+		-H 'accept: */*' \
+		-H "Authorization: Bearer $token" | jq -r '._embedded.items[] | select(.is_archived == 0) | .id'
+))
+
+download_wallabags "${videos[@]}"
+
+```
+
+The `wallabag-credentials` file just `export`s the four variables used in the `token` function, which are my credentials and the API keys.
